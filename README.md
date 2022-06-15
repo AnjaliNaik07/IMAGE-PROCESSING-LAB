@@ -10,7 +10,7 @@ cv2.waitKey(0)
 cv2.destroyAllwindows()
 
 output:![p1 op](https://user-images.githubusercontent.com/99865210/173809761-c66e0bbd-5701-451a-8a3d-5b32f00b0b17.png)
-
+******************************************************************************************************************************************************************
 
 
 program  2: develop a program to display the image using MAtplot lib
@@ -22,7 +22,7 @@ img=mpimg.imread('img.jpg')
 plt.imshow(img)
 
 output:![image](https://user-images.githubusercontent.com/99865210/173810407-90c87e31-b982-447f-a650-7f18da4ece6c.png)
-
+********************************************************************************************************************************************************************
 program 3 :Develpo a program to perform a linear transformation rotation
 
 from PIL import Image
@@ -32,8 +32,9 @@ img.show()
 cv2.waitKey(0)
 cv2.distroyAllwindows()
 
-output:<br>
+output:![image](https://user-images.githubusercontent.com/99865210/173816106-1bd26923-b5e7-4f13-86d6-0f058d75ccbb.png)
 
+**********************************************************************************************************************************************************************
 program 4: Develpo a program to convert color to RGB color values
 
 from PIL import ImageColor
@@ -50,7 +51,7 @@ output:(255, 255, 0)
 (255, 0, 0)
 (255, 192, 203)
 (0, 0, 255)
-
+***********************************************************************************************************************************************************************
 program 5: Write a pgm to create image using a color from PIL import image
 
 from PIL import Image
@@ -59,7 +60,7 @@ img.show()
 
 output:<br>
 
-
+*******************************************************************************************************************************************************************
 program 6: Develop a program to visulate the image using various color spaces
 
 import cv2
@@ -77,7 +78,7 @@ output: ![image](https://user-images.githubusercontent.com/99865210/173813702-ca
 output<br>
 
 output<br>
-
+***********************************************************************************************************************************************************************
 program 7:Write  a program to display the image attributes 
 
 from PIL import Image
@@ -90,5 +91,11 @@ print("Width:",image.width)
 print("Height",image.height)
 image.close();
 
-output:
+output:Filename: p1.jpg
+Format: JPEG
+Mode: RGB
+Size: (275, 183)
+Width: 275
+Height 183
 
+*******************************************************************************************************************************************************************
