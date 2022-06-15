@@ -35,3 +35,20 @@ cv2.distroyAllwindows()
 output:
 
 program 4: Develpo a program to convert color to RGB color values
+
+from PIL import ImageColor
+img1=ImageColor.getrgb("yellow")
+print(img1)
+img2=ImageColor.getrgb("red")
+print(img2)
+img3=ImageColor.getrgb("pink")
+print(img3)
+img4=ImageColor.getrgb("blue")
+print(img4)
+
+output:(255, 255, 0)
+(255, 0, 0)
+(255, 192, 203)
+(0, 0, 255)
+
+program 5: Write a pgm to create image using a color from PIL import image
