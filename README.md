@@ -52,3 +52,7 @@ output:(255, 255, 0)
 (0, 0, 255)
 
 program 5: Write a pgm to create image using a color from PIL import image
+
+from PIL import Image
+img=Image.new("RGB",(200,400),(0,0,255))
+img.show()
