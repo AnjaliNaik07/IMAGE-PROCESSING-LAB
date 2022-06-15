@@ -23,3 +23,15 @@ plt.imshow(img)
 
 output:![image](https://user-images.githubusercontent.com/99865210/173810407-90c87e31-b982-447f-a650-7f18da4ece6c.png)
 
+program 3 :Develpo a program to perform a linear transformation rotation
+
+from PIL import Image
+img =Image.open("L1.jpg")
+img=img.rotate(180)
+img.show()
+cv2.waitKey(0)
+cv2.distroyAllwindows()
+
+output:
+
+program 4: Develpo a program to convert color to RGB color values
