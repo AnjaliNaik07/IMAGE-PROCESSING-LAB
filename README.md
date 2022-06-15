@@ -78,8 +78,8 @@ output: ![image](https://user-images.githubusercontent.com/99865210/173813702-ca
 
 output:  ![image](https://user-images.githubusercontent.com/99865210/173816669-5892b36c-39c6-41b3-9348-20722de0186d.png)
 
+output:    ![image](https://user-images.githubusercontent.com/99865210/173816796-8dff3cb1-7126-4eab-bebf-ce0ec3d3d292.png)
 
-output<br>
 ***********************************************************************************************************************************************************************
 program 7:Write  a program to display the image attributes 
 
