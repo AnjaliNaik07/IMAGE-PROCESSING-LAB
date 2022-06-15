@@ -59,3 +59,6 @@ img.show()
 
 output:<br>
 
+
+program 6: Develop a program to visulate the image using various color spaces
+
