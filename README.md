@@ -14,3 +14,12 @@ output:![p1 op](https://user-images.githubusercontent.com/99865210/173809761-c66
 
 
 program  2: develop a program to display the image using MAtplot lib
+
+
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+img=mpimg.imread('img.jpg')
+plt.imshow(img)
+
+output:![image](https://user-images.githubusercontent.com/99865210/173810407-90c87e31-b982-447f-a650-7f18da4ece6c.png)
+
