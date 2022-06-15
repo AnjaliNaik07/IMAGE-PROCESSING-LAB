@@ -73,8 +73,22 @@ img=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 plt.show()
 
 output: ![image](https://user-images.githubusercontent.com/99865210/173813702-ca6d3deb-ab58-46c6-8c68-d7f03b330870.png)
+
 output<br>
+
 output<br>
 
 program 7:Write  a program to display the image attributes 
+
+from PIL import Image
+image=Image.open('p1.jpg')
+print("Filename:",image.filename)
+print("Format:",image.format)
+print("Mode:",image.mode)
+print("Size:",image.size)
+print("Width:",image.width)
+print("Height",image.height)
+image.close();
+
+output:
 
