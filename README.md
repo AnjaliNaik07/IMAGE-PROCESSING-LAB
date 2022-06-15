@@ -58,7 +58,8 @@ from PIL import Image
 img=Image.new("RGB",(200,400),(0,0,255))
 img.show()
 
-output:<br>
+output:![image](https://user-images.githubusercontent.com/99865210/173816410-cb6c56e3-bcdc-4071-a367-0630c472420f.png)
+
 
 *******************************************************************************************************************************************************************
 program 6: Develop a program to visulate the image using various color spaces
