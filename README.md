@@ -32,7 +32,7 @@ img.show()
 cv2.waitKey(0)
 cv2.distroyAllwindows()
 
-output:
+output:<br>
 
 program 4: Develpo a program to convert color to RGB color values
 
@@ -56,3 +56,6 @@ program 5: Write a pgm to create image using a color from PIL import image
 from PIL import Image
 img=Image.new("RGB",(200,400),(0,0,255))
 img.show()
+
+output:<br>
+
