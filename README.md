@@ -13,91 +13,91 @@ output:![p1 op](https://user-images.githubusercontent.com/99865210/173809761-c66
 ******************************************************************************************************************************************************************
 
 
-program  2: develop a program to display the image using MAtplot lib
+program  2: develop a program to display the image using MAtplot lib<br>
 
+<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=mpimg.imread('img.jpg')<br>
+plt.imshow(img)<br>
 
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-img=mpimg.imread('img.jpg')
-plt.imshow(img)
-
-output:![image](https://user-images.githubusercontent.com/99865210/173810407-90c87e31-b982-447f-a650-7f18da4ece6c.png)
+output:![image](https://user-images.githubusercontent.com/99865210/173810407-90c87e31-b982-447f-a650-7f18da4ece6c.png)<br>
 ********************************************************************************************************************************************************************
-program 3 :Develpo a program to perform a linear transformation rotation
+program 3 :Develpo a program to perform a linear transformation rotation<br>
 
-from PIL import Image
-img =Image.open("L1.jpg")
-img=img.rotate(180)
-img.show()
-cv2.waitKey(0)
-cv2.distroyAllwindows()
+from PIL import Image<br>
+img =Image.open("L1.jpg")<br>
+img=img.rotate(180)<br>
+img.show()<br>
+cv2.waitKey(0)<br>
+cv2.distroyAllwindows()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/173816106-1bd26923-b5e7-4f13-86d6-0f058d75ccbb.png)
+output:![image](https://user-images.githubusercontent.com/99865210/173816106-1bd26923-b5e7-4f13-86d6-0f058d75ccbb.png)<br>
 
 **********************************************************************************************************************************************************************
-program 4: Develpo a program to convert color to RGB color values
+program 4: Develpo a program to convert color to RGB color values<br>
 
-from PIL import ImageColor
-img1=ImageColor.getrgb("yellow")
-print(img1)
-img2=ImageColor.getrgb("red")
-print(img2)
-img3=ImageColor.getrgb("pink")
-print(img3)
-img4=ImageColor.getrgb("blue")
-print(img4)
+from PIL import ImageColor<br>
+img1=ImageColor.getrgb("yel<br><br>low")<br>
+print(img1)<br><br>
+img2=ImageColor.getrgb("red")<br><br>
+print(img2)<br><br>
+img3=ImageColor.getrgb("pink")<br><br>
+print(img3)<br><br>
+img4=ImageColor.getrgb("blue")<br><br>
+print(img4)<br><br>
 
-output:(255, 255, 0)
-(255, 0, 0)
-(255, 192, 203)
-(0, 0, 255)
+output:(255, 255, 0)<br>
+(255, 0, 0)<br>
+(255, 192, 203)<br>
+(0, 0, 255)<br>
 ***********************************************************************************************************************************************************************
-program 5: Write a pgm to create image using a color from PIL import image
+program 5: Write a pgm to create image using a color from PIL import image<br>
 
-from PIL import Image
-img=Image.new("RGB",(200,400),(0,0,255))
-img.show()
+from PIL import Image<br>
+img=Image.new("RGB",(200,400),(0,0,255))<br>
+img.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/173816410-cb6c56e3-bcdc-4071-a367-0630c472420f.png)
+output:![image](https://user-images.githubusercontent.com/99865210/173816410-cb6c56e3-bcdc-4071-a367-0630c472420f.png)<br>
 
 
 *******************************************************************************************************************************************************************
-program 6: Develop a program to visulate the image using various color spaces
+program 6: Develop a program to visulate the image using various color spaces<br>
+<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=cv2.imread('p2.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+plt.show()<br>
 
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread('p2.jpg')
-plt.imshow(img)
-plt.show()
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-img=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-plt.show()
+output: ![image](https://user-images.githubusercontent.com/99865210/173813702-ca6d3deb-ab58-46c6-8c68-d7f03b330870.png)<br>
 
-output: ![image](https://user-images.githubusercontent.com/99865210/173813702-ca6d3deb-ab58-46c6-8c68-d7f03b330870.png)
+output:  ![image](https://user-images.githubusercontent.com/99865210/173816669-5892b36c-39c6-41b3-9348-20722de0186d.png)<br>
 
-output:  ![image](https://user-images.githubusercontent.com/99865210/173816669-5892b36c-39c6-41b3-9348-20722de0186d.png)
-
-output:    ![image](https://user-images.githubusercontent.com/99865210/173816796-8dff3cb1-7126-4eab-bebf-ce0ec3d3d292.png)
+output:    ![image](https://user-images.githubusercontent.com/99865210/173816796-8dff3cb1-7126-4eab-bebf-ce0ec3d3d292.png)<br><br>
 
 ***********************************************************************************************************************************************************************
-program 7:Write  a program to display the image attributes 
+program 7:Write  a program to display the image attributes <br>
 
-from PIL import Image
-image=Image.open('p1.jpg')
-print("Filename:",image.filename)
-print("Format:",image.format)
-print("Mode:",image.mode)
-print("Size:",image.size)
-print("Width:",image.width)
-print("Height",image.height)
-image.close();
+from PIL import Image<br>
+image=Image.open('p1.jpg')<br>
+print("Filename:",image.filename)<br>
+print("Format:",image.format)<br>
+print("Mode:",image.mode)<br>
+print("Size:",image.size)<br>
+print("Width:",image.width)<br>
+print("Height",image.height)<br>
+image.close();<br>
 
-output:Filename: p1.jpg
-Format: JPEG
-Mode: RGB
-Size: (275, 183)
-Width: 275
-Height 183
+output:Filename: p1.jpg<br>
+Format: JPEG<br>
+Mode: RGB<br>
+Size: (275, 183)<br>
+Width: 275<br>
+Height 183<br>
 
 *******************************************************************************************************************************************************************
