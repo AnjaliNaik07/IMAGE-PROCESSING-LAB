@@ -117,8 +117,8 @@ plt.imshow(img)<br>
 
 output :![8opt](https://user-images.githubusercontent.com/99865210/174047093-19c7a0a6-e5f7-4602-9844-ba870bc4fd68.png)<br>
 original image length width (183, 275, 3)<br>
-Resized image length width (160, 150, 3)<br>
 
+Resized image length width (160, 150, 3)<br>
 <br>    ![8optt](https://user-images.githubusercontent.com/99865210/174047351-09465a4c-0408-438d-af55-d783426eab8b.png)<br>
  
  ******************************************************************************************************************************************************************
@@ -126,10 +126,8 @@ Resized image length width (160, 150, 3)<br>
  
  program 9:Original image to gray scale  and to Binary<br>
  
- 
- import cv2<br>
-
-# read the image file
+import cv2<br>
+#read the image file<br>
 img=cv2.imread('F2.jpg')<br>
 cv2.imshow("RGB",img)<br>
 cv2.waitKey(0)<br>
