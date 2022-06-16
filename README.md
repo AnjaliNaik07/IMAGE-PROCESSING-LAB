@@ -101,3 +101,10 @@ Width: 275<br>
 Height 183<br>
 
 *******************************************************************************************************************************************************************
+program 8: Resize the original image<br>
+
+import cv2<br>
+img=cv2.imread('b1.jpg',0)<br>
+cv2.imshow('b1',img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllwindows()<br>
