@@ -109,12 +109,22 @@ cv2.imshow('b1',img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllwindows()<br>
 
-output :![8opt](https://user-images.githubusercontent.com/99865210/174047093-19c7a0a6-e5f7-4602-9844-ba870bc4fd68.png)
-<br>    ![8optt](https://user-images.githubusercontent.com/99865210/174047351-09465a4c-0408-438d-af55-d783426eab8b.png)
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=mpimg.imread('img.jpg')<br>
+plt.imshow(img)<br>
+
+
+output :![8opt](https://user-images.githubusercontent.com/99865210/174047093-19c7a0a6-e5f7-4602-9844-ba870bc4fd68.png)<br>
+<br>    ![8optt](https://user-images.githubusercontent.com/99865210/174047351-09465a4c-0408-438d-af55-d783426eab8b.png)<br>
  
  
  
- program 9:Original image to gray scale  and to Binary
+ program 9:Original image to gray scale  and to Binary<br>
+ 
+ 
+ 
+ 
  
  
         
