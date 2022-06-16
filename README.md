@@ -61,7 +61,7 @@ img.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/173816410-cb6c56e3-bcdc-4071-a367-0630c472420f.png)<br>
 
 
-*******************************************************************************************************************************************************************
+***********************************************************************************************************************************************************************
 program 6: Develop a program to visulate the image using various color spaces<br>
 <br>
 import cv2<br>
@@ -118,12 +118,39 @@ plt.imshow(img)<br>
 output :![8opt](https://user-images.githubusercontent.com/99865210/174047093-19c7a0a6-e5f7-4602-9844-ba870bc4fd68.png)<br>
 <br>    ![8optt](https://user-images.githubusercontent.com/99865210/174047351-09465a4c-0408-438d-af55-d783426eab8b.png)<br>
  
+ ******************************************************************************************************************************************************************
  
  
  program 9:Original image to gray scale  and to Binary<br>
  
  
+ import cv2<br>
+
+# read the image file
+img=cv2.imread('F2.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br>
+
+
+#Gray scale<br>
+
+img=cv2.imread('F2.jpg',0)<br>
+cv2.imshow("Gray",img)<br>
+cv2.waitKey(0)<br>
+
+
+#Binary image<br>
+ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
+cv2.imshow("Binary",bw_img)<br>
+CV2.waitKey(0)<br>
+cv2.destroyAllwindows()<br>
+
+output :![9opt](https://user-images.githubusercontent.com/99865210/174051559-50dec92f-cf41-474c-8d75-b0379d62b815.png)<br>
+        ![9optt](https://user-images.githubusercontent.com/99865210/174051596-0a1e79a1-e1f7-4f85-8318-6202f2ccab6c.png)<br>
+         ![9opttt](https://user-images.githubusercontent.com/99865210/174051691-9bbc480d-63a4-4891-a9ff-19109c4fed69.png)<br>
+
  
+ *****************************************************************************************************************************************************************
  
  
  
