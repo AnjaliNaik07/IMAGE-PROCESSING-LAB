@@ -1,9 +1,9 @@
 # IMAGE-PROCESSING-LAB
 
 
-program 1 : develpo a program to display the Gray scale image using read and write  operation
+program 1 : develop a program to display the Gray scale image using read and write  operation
 
-import cv2<br><br>
+import cv2<br>
 img=cv2.imread('b1.jpg',0)<br>
 cv2.imshow('b1',img)<br>
 cv2.waitKey(0)<br>
@@ -15,7 +15,6 @@ output:![p1 op](https://user-images.githubusercontent.com/99865210/173809761-c66
 
 program  2: develop a program to display the image using MAtplot lib<br>
 
-<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
 img=mpimg.imread('img.jpg')<br>
@@ -52,7 +51,7 @@ output:(255, 255, 0)<br>
 (255, 192, 203)<br>
 (0, 0, 255)<br>
 ***********************************************************************************************************************************************************************
-program 5: Write a pgm to create image using a color from PIL import image<br>
+program 5:  Write a pgm to create image using a color from PIL import image<br>
 
 from PIL import Image<br>
 img=Image.new("RGB",(200,400),(0,0,255))<br>
@@ -62,7 +61,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/173816410-cb6
 
 
 ***********************************************************************************************************************************************************************
-program 6: Develop a program to visulate the image using various color spaces<br>
+program 6:  Develop a program to visulate the image using various color spaces<br>
 <br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
@@ -81,7 +80,7 @@ output:  ![image](https://user-images.githubusercontent.com/99865210/173816669-5
 output:    ![image](https://user-images.githubusercontent.com/99865210/173816796-8dff3cb1-7126-4eab-bebf-ce0ec3d3d292.png)<br><br>
 
 ***********************************************************************************************************************************************************************
-program 7:Write  a program to display the image attributes <br>
+program 7: Write  a program to display the image attributes <br>
 
 from PIL import Image<br>
 image=Image.open('p1.jpg')<br>
@@ -132,13 +131,11 @@ img=cv2.imread('F2.jpg')<br>
 cv2.imshow("RGB",img)<br>
 cv2.waitKey(0)<br>
 
-
 #Gray scale<br>
 
 img=cv2.imread('F2.jpg',0)<br>
 cv2.imshow("Gray",img)<br>
 cv2.waitKey(0)<br>
-
 
 #Binary image<br>
 ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
