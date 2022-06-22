@@ -152,5 +152,13 @@ output :![9opt](https://user-images.githubusercontent.com/99865210/174051559-50d
  22/06/2022<br>
  
  program:
-        
+        from skimage import io
+import matplotlib.pyplot as plt
+url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAz7oRpSnwGnBO2p64jeZKA6b0ULoNEII0w&usqp=CAU.jpg'
+image=io.imread(url)
+plt.imshow(image)
+plt.show()
+
+output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)
+
 
