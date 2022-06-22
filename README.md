@@ -161,4 +161,13 @@ plt.show()
 
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)
 
+*****************************************
+
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+img=mping.imread('Z1.jpg')
+plt.imshow(img)
+plt.show()
+
 
