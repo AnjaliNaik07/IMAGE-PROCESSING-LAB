@@ -151,23 +151,26 @@ output :![9opt](https://user-images.githubusercontent.com/99865210/174051559-50d
  *****************************************************************************************************************************************************************
  22/06/2022<br>
  
- program:
-        from skimage import io
-import matplotlib.pyplot as plt
-url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAz7oRpSnwGnBO2p64jeZKA6b0ULoNEII0w&usqp=CAU.jpg'
-image=io.imread(url)
-plt.imshow(image)
-plt.show()
+ program:To dread image using url<br><br>
+        from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAz7oRpSnwGnBO2p64jeZKA6b0ULoNEII0w&usqp=CAU.jpg'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)
+output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
 
 *****************************************
 
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-img=mping.imread('Z1.jpg')
-plt.imshow(img)
-plt.show()
+import cv2<br><br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=mping.imread('Z1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+output:![image](https://user-images.githubusercontent.com/99865210/175280810-18740c47-d8c2-430f-b4a9-368f5d0e5f05.png)
 
 
+
+                      
