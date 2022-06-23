@@ -255,7 +255,23 @@ plt.imshow(blur)
 plt.show()
 output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)
 
+**********************************************************************************************************************************************************
+import cv2 
+img=cv2.imread('D:\\rabbit.jpg')
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+cv2.imshow("GRAY image",gray)
+cv2.imshow("HSV image",hsv)
+cv2.imshow("LAB image",lab)
+cv2.imshow("HLS image",hls)
+cv2.imshow("YUV image",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
+output:
 
 
 
