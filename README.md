@@ -163,14 +163,4 @@ output:![image](https://user-images.githubusercontent.com/99865210/175022163-979
 
 *****************************************
 
-import cv2<br><br>
-import matplotlib.image as mping<br>
-import matplotlib.pyplot as plt<br>
-img=mping.imread('Z1.jpg')<br>
-plt.imshow(img)<br>
-plt.show()<br>
-output:![image](https://user-images.githubusercontent.com/99865210/175280810-18740c47-d8c2-430f-b4a9-368f5d0e5f05.png)
 
-
-
-                      
