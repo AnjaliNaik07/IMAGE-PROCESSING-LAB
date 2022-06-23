@@ -192,7 +192,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd7
 
 ![image](https://user-images.githubusercontent.com/99865210/175287258-1721da91-bf87-4048-8144-879f34e2e9d7.png)
 
-
+****************************************************************************************************************************************************
 
 program 2:mask and blurr
 
@@ -203,14 +203,57 @@ import matplotlib.pyplot as plt
 img=mpimg.imread("flower3.jpg")
 plt.imshow(img)
 plt.show()
+output:
 ![image](https://user-images.githubusercontent.com/99865210/175288164-eb54126e-8d48-40a2-84ab-49732c46e033.png)
+*****************
+hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+light_orange=(1,190,200)
+dark_orange=(18,255,255)
+mask=cv2.inRange(hsv_img,light_orange,dark_orange)
+result=cv2.bitwise_and(img,img,mask=mask) 
+plt.subplot(1,2,1) 
+plt.imshow(mask,cmap='gray') 
+plt.subplot(1,2,2)
+plt.imshow(result)
+plt.show()
+ output:
+ 
+
+
+![image](https://user-images.githubusercontent.com/99865210/175288488-b88bba43-c045-41b5-843d-3657910c7df7.png)
+
+![image](https://user-images.githubusercontent.com/99865210/175288507-d8a4faaf-f3dd-41da-9c9f-30e116c25e21.png)
 
 
 
+*********************************************************************************************************************************************************
 
-
-
-
+light_white=(0,0,200) 
+dark_white=(145,60,255) 
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)
+result_white=cv2.bitwise_and(img,img,mask=mask_white) 
+plt.subplot(1,2,1)
+plt.imshow(mask_white,cmap='gray') 
+plt.subplot(1,2,2)
+plt.imshow(result_white) 
+plt.show()
+output:![image](https://user-images.githubusercontent.com/99865210/175288679-5a29e88c-c407-4527-97a4-04f2a7b96ee3.png)
+![image](https://user-images.githubusercontent.com/99865210/175288725-7d085d65-c1df-429c-ba28-0db33d724e38.png)
+********************************************************************************************************************************************
+final_mask=mask+mask_white
+final_result=cv2.bitwise_and(img,img,mask=final_mask)
+plt.subplot(1,2,1) 
+plt.imshow(final_mask,cmap="gray")
+plt.subplot(1,2,2) 
+plt.imshow(final_result) 
+plt.show() 
+output:![image](https://user-images.githubusercontent.com/99865210/175288847-a89c5c65-0cc0-4db4-8d27-38535c6b3509.png)
+![image](https://user-images.githubusercontent.com/99865210/175288874-0adae1f4-54f6-4622-b3f7-1dbedd72eb3f.png)
+*************************************
+blur=cv2.GaussianBlur(final_result,(7,7),0) 
+plt.imshow(blur) 
+plt.show()
+output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)
 
 
 
