@@ -256,6 +256,8 @@ plt.show()
 output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)
 
 **********************************************************************************************************************************************************
+program:Develop a pgm to change the image to different color spaces
+
 import cv2 
 img=cv2.imread('D:\\rabbit.jpg')
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -273,6 +275,25 @@ cv2.destroyAllWindows()
 
 output:
 
+
+***************************************************************************************************************************************************************
+program 2 :program to create an image using 2D array
+
+
+import cv2 as c 
+import numpy as np
+from PIL import Image
+array=np.zeros([100,200,3],dtype=np.uint8)
+array[:,:100]=[255,130,0]
+array[:,100:]=[0,0,255]
+img=Image.fromarray(array)
+img.save('flower1.png')
+img.show()
+c.waitKey(0)  
+
+
+
+output:
 
 
 
