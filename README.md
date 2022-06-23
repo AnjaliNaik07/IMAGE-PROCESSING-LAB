@@ -185,5 +185,6 @@ plt.imshow(fimg4)
 plt.show()
 cv2.imwrite('output.jpg',fimg4)
 
-output:
+output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd75e48b-e145-46ee-95e8-45da54aaf083.png)
+
 
