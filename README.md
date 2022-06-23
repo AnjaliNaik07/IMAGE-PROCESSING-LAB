@@ -32,6 +32,7 @@ cv2.waitKey(0)<br>
 cv2.distroyAllwindows()<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/173816106-1bd26923-b5e7-4f13-86d6-0f058d75ccbb.png)<br>
+![image](https://user-images.githubusercontent.com/99865210/175286848-26308dac-00ad-40ec-b707-a23e7f3473e3.png)
 
 **********************************************************************************************************************************************************************
 program 4: Develpo a program to convert color to RGB color values<br>
