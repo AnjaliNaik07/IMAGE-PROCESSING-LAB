@@ -162,5 +162,28 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
 
 *****************************************
+program: To perform arthemetic operations
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+img1=cv2.imread('flower2.jpg')
+img2=cv2.imread('flower3.jpg')
+fimg1=img1+img2
+plt.imshow(fimg1)
+plt.show()
+cv2.imwrite('output.jpg',fimg1)
+fimg2=img1-img2
+plt.imshow(fimg2)
+plt.show()
+cv2.imwrite('output.jpg',fimg2)
+fimg3=img1*img2
+plt.imshow(fimg3)
+plt.show()
+cv2.imwrite('output.jpg',fimg3)
+fimg4=img1/img2
+plt.imshow(fimg4)
+plt.show()
+cv2.imwrite('output.jpg',fimg4)
 
+output:
 
