@@ -197,7 +197,12 @@ output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd7
 program 2:mask and blurr
 
 
-
+import cv2
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+img=mpimg.imread("flower3.jpg")
+plt.imshow(img)
+plt.show()
 ![image](https://user-images.githubusercontent.com/99865210/175288164-eb54126e-8d48-40a2-84ab-49732c46e033.png)
 
 
