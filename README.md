@@ -163,34 +163,33 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
 
 *****************************************
-program 3: To perform arthemetic operations
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-img1=cv2.imread('flower2.jpg')
-img2=cv2.imread('flower3.jpg')
-fimg1=img1+img2
-plt.imshow(fimg1)
-plt.show()
-cv2.imwrite('output.jpg',fimg1)
-fimg2=img1-img2
-plt.imshow(fimg2)
-plt.show()
-cv2.imwrite('output.jpg',fimg2)
-fimg3=img1*img2
-plt.imshow(fimg3)
-plt.show()
-cv2.imwrite('output.jpg',fimg3)
-fimg4=img1/img2
-plt.imshow(fimg4)
-plt.show()
-cv2.imwrite('output.jpg',fimg4)
+program 3: To perform arthemetic operations<br>
+import cv2<br><br>
+import matplot<br>lib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img1=cv2.imread('flower2.jpg')<br>
+img2=cv2.imread('flower3.jpg')<br>
+fimg1=img1+img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2=img1-img2<br>
+plt.imshow(fimg2)<br><br>
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3=img1*img2<br>
+plt.imshow(fimg3)<br>
+plt.show()cv2.imwrite('output.jpg',fimg3)<br>
+fimg4=img1/img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg4)<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd75e48b-e145-46ee-95e8-45da54aaf083.png)
+output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd75e48b-e145-46ee-95e8-45da54aaf083.png)<br>
 
-![image](https://user-images.githubusercontent.com/99865210/175287145-050e7629-d28d-4122-8487-71351e1c024c.png)
+![image](https://user-images.githubusercontent.com/99865210/175287145-050e7629-d28d-4122-8487-71351e1c024c.png)<br>
 
-![image](https://user-images.githubusercontent.com/99865210/175287258-1721da91-bf87-4048-8144-879f34e2e9d7.png)
+![image](https://user-images.githubusercontent.com/99865210/175287258-1721da91-bf87-4048-8144-879f34e2e9d7.png)<br>
 
 ****************************************************************************************************************************************************
 
