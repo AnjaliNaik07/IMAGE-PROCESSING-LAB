@@ -152,7 +152,7 @@ output :![9opt](https://user-images.githubusercontent.com/99865210/174051559-50d
  *****************************************************************************************************************************************************************
  22/06/2022<br>
  
- program:To dread image using url<br><br>
+ program 1:To dread image using url<br><br>
         from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAz7oRpSnwGnBO2p64jeZKA6b0ULoNEII0w&usqp=CAU.jpg'<br>
@@ -163,7 +163,7 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
 
 *****************************************
-program: To perform arthemetic operations
+program 3: To perform arthemetic operations
 import cv2
 import matplotlib.image as mping
 import matplotlib.pyplot as plt
@@ -194,7 +194,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd7
 
 
 
-
+program 2:mask and blurr
 
 
 
