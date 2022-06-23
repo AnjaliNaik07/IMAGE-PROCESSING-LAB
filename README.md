@@ -193,106 +193,105 @@ output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd7
 
 ****************************************************************************************************************************************************
 
-program 2:mask and blurr
+program 2:mask and blurr<br>
 
 
-import cv2
-import matplotlib.image as mpimg
-import matplotlib.pyplot as plt
-img=mpimg.imread("flower3.jpg")
-plt.imshow(img)
-plt.show()
-output:
-![image](https://user-images.githubusercontent.com/99865210/175288164-eb54126e-8d48-40a2-84ab-49732c46e033.png)
+import cv2<br>
+import matplotlib.image as mpimg<br>
+import matplotlib.pyplot as plt<br>
+img=mpimg.imread("flower3.jpg")<br>
+plt.imshow(img)<br>
+plt.show()<br>
+output:<br>
+![image](https://user-images.githubusercontent.com/99865210/175288164-eb54126e-8d48-40a2-84ab-49732c46e033.png)<br>
 *****************
-hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
-light_orange=(1,190,200)
-dark_orange=(18,255,255)
-mask=cv2.inRange(hsv_img,light_orange,dark_orange)
-result=cv2.bitwise_and(img,img,mask=mask) 
-plt.subplot(1,2,1) 
-plt.imshow(mask,cmap='gray') 
-plt.subplot(1,2,2)
-plt.imshow(result)
-plt.show()
+hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(18,255,255)<br>
+mask=cv2.inRange(hsv_img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask) <br>
+plt.subplot(1,2,1) <br>
+plt.imshow(mask,cmap='gray') <br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
  output:
- 
+ <br>
 
-
-![image](https://user-images.githubusercontent.com/99865210/175288488-b88bba43-c045-41b5-843d-3657910c7df7.png)
-
-![image](https://user-images.githubusercontent.com/99865210/175288507-d8a4faaf-f3dd-41da-9c9f-30e116c25e21.png)
+<br>
+![image](https://user-images.githubusercontent.com/99865210/175288488-b88bba43-c045-41b5-843d-3657910c7df7.png)<br>
+<br>
+![image](https://user-images.githubusercontent.com/99865210/175288507-d8a4faaf-f3dd-41da-9c9f-30e116c25e21.png)<br>
 
 
 
 *********************************************************************************************************************************************************
 
-light_white=(0,0,200) 
-dark_white=(145,60,255) 
-mask_white=cv2.inRange(hsv_img,light_white,dark_white)
-result_white=cv2.bitwise_and(img,img,mask=mask_white) 
-plt.subplot(1,2,1)
-plt.imshow(mask_white,cmap='gray') 
-plt.subplot(1,2,2)
-plt.imshow(result_white) 
-plt.show()
-output:![image](https://user-images.githubusercontent.com/99865210/175288679-5a29e88c-c407-4527-97a4-04f2a7b96ee3.png)
-![image](https://user-images.githubusercontent.com/99865210/175288725-7d085d65-c1df-429c-ba28-0db33d724e38.png)
+light_white=(0,0,200) <br>
+dark_white=(145,60,255) <br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white) <br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white,cmap='gray') <br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white) <br>
+plt.show()<br>
+output:![image](https://user-images.githubusercontent.com/99865210/175288679-5a29e88c-c407-4527-97a4-04f2a7b96ee3.png)<br>
+![image](https://user-images.githubusercontent.com/99865210/175288725-7d085d65-c1df-429c-ba28-0db33d724e38.png)<br>
 ********************************************************************************************************************************************
-final_mask=mask+mask_white
-final_result=cv2.bitwise_and(img,img,mask=final_mask)
-plt.subplot(1,2,1) 
-plt.imshow(final_mask,cmap="gray")
-plt.subplot(1,2,2) 
-plt.imshow(final_result) 
-plt.show() 
-output:![image](https://user-images.githubusercontent.com/99865210/175288847-a89c5c65-0cc0-4db4-8d27-38535c6b3509.png)
-![image](https://user-images.githubusercontent.com/99865210/175288874-0adae1f4-54f6-4622-b3f7-1dbedd72eb3f.png)
+final_mask=mask+mask_white<br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)<br><br>
+plt.subplot(1,2,1) <br>
+plt.imshow(final_mask,cmap="gray")<br>
+plt.subplot(1,2,2) <br>
+plt.imshow(final_result) <br>
+plt.show() <br>
+output:![image](https://user-images.githubusercontent.com/99865210/175288847-a89c5c65-0cc0-4db4-8d27-38535c6b3509.png)<br>
+![image](https://user-images.githubusercontent.com/99865210/175288874-0adae1f4-54f6-4622-b3f7-1dbedd72eb3f.png)<br>
 *************************************
-blur=cv2.GaussianBlur(final_result,(7,7),0) 
-plt.imshow(blur) 
-plt.show()
-output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)
+blur=cv2.GaussianBlur(final_result,(7,7),0) <br>
+plt.imshow(blur) <br>
+plt.show()<br>
+output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)<br>
 
 **********************************************************************************************************************************************************
-program:Develop a pgm to change the image to different color spaces
+program:Develop a pgm to change the image to different color spaces<br>
 
-import cv2 
-img=cv2.imread('D:\\rabbit.jpg')
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
-cv2.imshow("GRAY image",gray)
-cv2.imshow("HSV image",hsv)
-cv2.imshow("LAB image",lab)
-cv2.imshow("HLS image",hls)
-cv2.imshow("YUV image",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-output:
+import cv2 <br>
+img=cv2.imread('D:\\rabbit.jpg')<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLS image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+<br>
+output:<br>
 
 
 ***************************************************************************************************************************************************************
-program 2 :program to create an image using 2D array
+program 2 :program to create an image using 2D array<br>
 
 
-import cv2 as c 
-import numpy as np
-from PIL import Image
-array=np.zeros([100,200,3],dtype=np.uint8)
-array[:,:100]=[255,130,0]
-array[:,100:]=[0,0,255]
-img=Image.fromarray(array)
-img.save('flower1.png')
-img.show()
-c.waitKey(0)  
+import cv2 as c <br>
+import numpy as np<br>
+from PIL import Image<br>
+array=np.zeros([100,200,3],dtype=np.uint8)<br>
+array[:,:100]=[255,130,0]<br>
+array[:,100:]=[0,0,255]<br>
+img=Image.fromarray(array)<br>
+img.save('flower1.png')<br>
+img.show()<br>
+c.waitKey(0)  <br>
 
 
 
-output:
+output:<br>
 
 
 
