@@ -327,5 +327,29 @@ output:![image](https://user-images.githubusercontent.com/99865210/176403037-7ab
 ![image](https://user-images.githubusercontent.com/99865210/176403245-254d61ab-0680-4bf8-afaa-db09cd61f299.png)
 ![image](https://user-images.githubusercontent.com/99865210/176403285-788f63df-1297-4cf1-bf86-7bcdba726e0c.png)<br>
 
+program 16: bilateral
+import cv2
+import numpy as np
+image=cv2.imread('b3.jpg')
+cv2.imshow('Original Image',image)
+cv2.waitKey(0)
+Gaussian=cv2.GaussianBlur(image, (7, 7),0)
+cv2.imshow('Gaussian Blurring',Gaussian)
+cv2.waitKey(0)
+median=cv2.medianBlur(image, 5)
+cv2.imshow('Median blurring',median)
+cv2.waitKey(0)
+bilateral=cv2.bilateralFilter(image, 9, 75, 75)
+cv2.imshow('Bilateral Blurring', bilateral)
+cv2.waitKey(0)
+cv2.destroyAllwindows()
+
+output:![image](https://user-images.githubusercontent.com/99865210/176406914-372e7044-6f21-476a-a737-4567d203098c.png)
+![image](https://user-images.githubusercontent.com/99865210/176407028-976d1b0b-c44f-4cc4-b771-79ecfa644d82.png)
+![image](https://user-images.githubusercontent.com/99865210/176407141-b5ef89ca-0274-4b13-bddb-d72e6b9b998d.png)
+![image](https://user-images.githubusercontent.com/99865210/176407279-0899768d-869d-4ec1-9a92-c31992d61f21.png)
+
+
+
 
 
