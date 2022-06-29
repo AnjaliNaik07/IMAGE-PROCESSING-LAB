@@ -381,3 +381,34 @@ output:![image](https://user-images.githubusercontent.com/99865210/176414127-21a
 
 ![image](https://user-images.githubusercontent.com/99865210/176414936-c6ca42d8-66f0-4479-beb0-f47b8afbb80d.png)
 
+
+
+program:18
+
+
+import cv2
+import numpy as np
+from matplotlib  import pyplot as plt
+from PIL import Image,ImageEnhance
+img=cv2.imread('appu1.jpg',0)
+ax=plt.subplots(figsize=(20,10))
+kernal=np.ones((5,5),np.uint8)
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernal)
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernal)
+erosion=cv2.erode(img,kernal,iterations=1)
+dilation=cv2.dilate(img,kernal,iterations=1)
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernal)
+plt.subplot(151)
+plt.imshow(opening)
+plt.subplot(152)
+plt.imshow(closing)
+plt.subplot(153)
+plt.imshow(erosion)
+plt.subplot(154)
+plt.imshow(dilation)
+plt.subplot(155)
+plt.imshow(gradient)
+cv2.waitKey(0)
+
+output:![image](https://user-images.githubusercontent.com/99865210/176419670-4c7310aa-e37f-4131-9644-5403dd59b901.png)
+
