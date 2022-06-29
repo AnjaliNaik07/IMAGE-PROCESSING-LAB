@@ -322,10 +322,7 @@ cv2.waitKey(0)
 
 
 output:![image](https://user-images.githubusercontent.com/99865210/176403037-7ab37abb-b660-4e53-9323-2c7359302cc9.png)
-![image](https://user-images.githubusercontent.com/99865210/176403103-42c72b46-b2e4-40ea-b139-4ba7a408d704.png)
-![image](https://user-images.githubusercontent.com/99865210/176403184-48b61d8e-14e9-4e11-be55-0404b737e0f8.png)
-![image](https://user-images.githubusercontent.com/99865210/176403245-254d61ab-0680-4bf8-afaa-db09cd61f299.png)
-![image](https://user-images.githubusercontent.com/99865210/176403285-788f63df-1297-4cf1-bf86-7bcdba726e0c.png)<br>
+
 
 program 16: bilateral
 import cv2
