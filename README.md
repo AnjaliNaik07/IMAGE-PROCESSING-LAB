@@ -162,7 +162,7 @@ plt.show()<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
 
-*****************************************
+******************************************************************************************************************************************************************
 program 3: To perform arthemetic operations<br>
 import cv2<br><br>
 import matplot<br>lib.image as mping<br>
@@ -204,7 +204,7 @@ plt.imshow(img)<br>
 plt.show()<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/99865210/175288164-eb54126e-8d48-40a2-84ab-49732c46e033.png)<br>
-*****************
+**************************************************************************************************************************************************
 hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)<br>
 light_orange=(1,190,200)<br>
 dark_orange=(18,255,255)<br>
@@ -326,7 +326,7 @@ cv2.waitKey(0)<br><br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/176403037-7ab37abb-b660-4e53-9323-2c7359302cc9.png)<br>
 
-
+*****************************************************************************************************************************************************************
 program 16: bilateral<br>
 import cv2<br>
 import numpy as np
@@ -384,7 +384,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/176414127-21a
 <br>
 ![image](https://user-images.githubusercontent.com/99865210/176414936-c6ca42d8-66f0-4479-beb0-f47b8afbb80d.png)<br>
 
-
+***************************************************************************************************************************************************************
 
 program:18<br>
 
@@ -415,7 +415,7 @@ cv2.waitKey(0)<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/176419670-4c7310aa-e37f-4131-9644-5403dd59b901.png)<br>
 
-
+***********************************************************************************************************************************************************************
 program :19<br> image with background<br>
 from PIL import Image<br>
 
@@ -432,7 +432,7 @@ for i in histo:<br>
 print(histo_string)<br>
  output:![image](https://user-images.githubusercontent.com/99865210/178947956-db39bd02-368f-49a8-a074-2cc95f95dd7c.png)<br>
  
- 
+ *****************************************************************************************************************************************************************
  program :20<br>image without background<br>
  import cv2<br>
 import numpy as np<br>
@@ -452,7 +452,7 @@ plt.imshow(equ,'gray')<br>
 plt.show()<br><br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/178948588-e0860174-f9f1-4e9e-83ba-a3ea84490626.png)<br>
-
+****************************************************************************************************************************************************************
 
 program :21<br><br>
 import cv2<br>
@@ -470,7 +470,7 @@ if isSaved:<br>
     output:<br>
     
     ![image](https://user-images.githubusercontent.com/99865210/178954894-fcdea585-1676-4145-92d6-2855fca5b508.png)<br>
-
+******************************************************************************************************************************************************************
  program :22 histogram pgm<br>
  
  
@@ -482,6 +482,7 @@ plt.show()
     
     output:![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
     <br>
+********************************************************************************************************************************************************************
     <br>
     from skimage import io<br>
 import matplotlib.pyplot as plt<br>
@@ -493,7 +494,7 @@ plt.show()<br>
 <br>
 output:![image](https://use<br>r-images.githubusercontent.com/99865210/178966669-d87c06af-3e6b-4be1-8792-cf9f01244280.png)
 <br>
-    
+**********************************    
 import cv2<br>
 import numpy as np<br>
 img  = cv2.imread('a3.jpg',0)<br>
@@ -502,6 +503,7 @@ plt.hist(img.ravel(),256,[0,256])<br>
 plt.show()<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/178967163-01e5fdea-4940-40da-a2b4-d01766e81918.png)<br>
+***************************************
 import numpy as np<br>
 import cv2 as cv<br>
 from matplotlib import pyplot as plt<br>
