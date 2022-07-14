@@ -412,3 +412,77 @@ cv2.waitKey(0)<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/176419670-4c7310aa-e37f-4131-9644-5403dd59b901.png)<br>
 
+
+program :19<br> image with background<br>
+from PIL import Image
+
+image_file = 'test.tiff'
+
+image = Image.open(image_file).convert('L')
+
+histo = image.histogram()
+histo_string = ''
+
+for i in histo:
+  histo_string += str(i) + "\n"
+
+print(histo_string)<br>
+ output:![image](https://user-images.githubusercontent.com/99865210/178947956-db39bd02-368f-49a8-a074-2cc95f95dd7c.png)<br>
+ 
+ 
+ program :20<br>image without background<br>
+ import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('b4.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+  for j in range(0,y):
+     if(image[i][j]>50 and image[i][j]<150):
+       z[i][j]=255
+     else:
+        z[i][j]=0
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing w/o background')
+plt.imshow(equ,'gray')
+plt.show()<br>
+
+output:![image](https://user-images.githubusercontent.com/99865210/178948588-e0860174-f9f1-4e9e-83ba-a3ea84490626.png)<br>
+
+
+program :21<br.
+import cv2
+OriginalImg=cv2.imread('b2.jpg')
+GrayImg=cv2.imread('b2.jpg',0)
+isSaved=cv2.imwrite('D:\A\i.jpg',GrayImg)
+cv2.imshow("display Original Image",OriginalImg)
+cv2.imshow("display Grayscale Image",GrayImg)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+if isSaved:
+    print("the image is succesfully saved.")<br>
+    
+    
+    output:<br>
+    
+    
+    
+    
+    
+    
+    
+    
+    program 22: using Histogram
+      open cv
+      numpy
+      pil
+     
+
+
+ 
+ 
+ 
+
+
+
