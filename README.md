@@ -479,9 +479,8 @@ import matplotlib.pyplot as plt
 image = io.imread('a3.jpg')
 ax = plt.hist(image.ravel(), bins = 256)
 plt.show()
-    
-    output: ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
-    <br>
+    output:
+    ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
 ********************************************************************************************************************************************************************
     <br>
     from skimage import io<br>
@@ -493,7 +492,7 @@ _ = plt.ylabel('Count') <br>
 plt.show()<br>
 <br>
 output:![image](https://use<br>r-images.githubusercontent.com/99865210/178966669-d87c06af-3e6b-4be1-8792-cf9f01244280.png)
-<br>
+
 **********************************    
 import cv2<br>
 import numpy as np<br>
@@ -514,9 +513,9 @@ img = cv.imread('a3.jpg',0)<br>
 plt.hist(img.ravel(),256,[0,256]);<br>
 plt.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c70083-3b77-4518-a9c1-31fdb00ef395.png)<br>
+output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c70083-3b77-4518-a9c1-31fdb00ef395.png)
 
-![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)<br>
+![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)
 
 
 
