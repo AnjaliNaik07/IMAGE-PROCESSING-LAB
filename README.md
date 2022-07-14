@@ -467,9 +467,9 @@ if isSaved:<br>
     print("the image is succesfully saved.")<br>
     
     
-    output:<br>
+    output:
     
-    ![image](https://user-images.githubusercontent.com/99865210/178954894-fcdea585-1676-4145-92d6-2855fca5b508.png)<br>
+    ![image](https://user-images.githubusercontent.com/99865210/178954894-fcdea585-1676-4145-92d6-2855fca5b508.png)
 
     
     
