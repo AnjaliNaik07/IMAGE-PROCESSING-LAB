@@ -477,15 +477,7 @@ if isSaved:<br>
     
     
     
-    program 22: using Histogram
-      open cv
-      numpy
-      pil
-     
-
-
- 
- 
+    p
  
 
 
