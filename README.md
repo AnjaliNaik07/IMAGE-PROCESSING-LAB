@@ -258,21 +258,21 @@ output:![image](https://user-images.githubusercontent.com/99865210/175288992-353
 program:Develop a pgm to change the image to different color spaces<br>
 
 import cv2
-img=cv2.imread('D:\STUDENT\DataSet\images.jpg')<br>
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
-cv2.imshow("GRAY image",gray)
-cv2.imshow("HSV image",hsv)
-cv2.imshow("LAB image",lab)
-cv2.imshow("HLS image",hls)
-cv2.imshow("YUV image",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-<br>
-output:<br>![image](https://user-images.githubusercontent.com/99865210/178957793-001684d5-f0f8-40ae-8438-f497f586b5e8.png)<br>
+img=cv2.imread('D:\STUDENT\DataSet\images.jpg')<br><br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br><br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br><br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br><br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br><br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br><br>
+cv2.imshow("GRAY image",gray)<br><br>
+cv2.imshow("HSV image",hsv)<br><br>
+cv2.imshow("LAB image",lab)<br><br>
+cv2.imshow("HLS image",hls)<br><br>
+cv2.imshow("YUV image",yuv)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.destroyAllWindows()<br><br>
+<br><br><br>
+output:<br>![image](https://user-images.githubusercontent.com/99865210/178957793-001684d5-f0f8-40ae-8438-f497f586b5e8.png)<br><br><br>
 
 
 
@@ -417,53 +417,53 @@ output:![image](https://user-images.githubusercontent.com/99865210/176419670-4c7
 
 
 program :19<br> image with background<br>
-from PIL import Image
+from PIL import Image<br>
 
-image_file = 'test.tiff'
+image_file = 'test.tiff'<br>
 
-image = Image.open(image_file).convert('L')
+image = Image.open(image_file).convert('L')<br>
 
-histo = image.histogram()
-histo_string = ''
+histo = image.histogram()<br>
+histo_string = ''<br>
 
-for i in histo:
-  histo_string += str(i) + "\n"
+for i in histo:<br>
+  histo_string += str(i) + "\n"<br>
 
 print(histo_string)<br>
  output:![image](https://user-images.githubusercontent.com/99865210/178947956-db39bd02-368f-49a8-a074-2cc95f95dd7c.png)<br>
  
  
  program :20<br>image without background<br>
- import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('b4.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-  for j in range(0,y):
-     if(image[i][j]>50 and image[i][j]<150):
-       z[i][j]=255
-     else:
-        z[i][j]=0
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing w/o background')
-plt.imshow(equ,'gray')
-plt.show()<br>
+ import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('b4.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+  for j in range(0,y):<br>
+     if(image[i][j]>50 and image[i][j]<150):<br>
+       z[i][j]=255<br>
+     else:<br>
+        z[i][j]=0<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing w/o background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br><br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/178948588-e0860174-f9f1-4e9e-83ba-a3ea84490626.png)<br>
 
 
-program :21<br.
-import cv2
-OriginalImg=cv2.imread('b2.jpg')
-GrayImg=cv2.imread('b2.jpg',0)
-isSaved=cv2.imwrite('D:\A\i.jpg',GrayImg)
-cv2.imshow("display Original Image",OriginalImg)
-cv2.imshow("display Grayscale Image",GrayImg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-if isSaved:
+program :21<br><br>
+import cv2<br>
+OriginalImg=cv2.imread('b2.jpg')<br>
+GrayImg=cv2.imread('b2.jpg',0)<br>
+isSaved=cv2.imwrite('D:\A\i.jpg',GrayImg)<br>
+cv2.imshow("display Original Image",OriginalImg)<br>
+cv2.imshow("display Grayscale Image",GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
     print("the image is succesfully saved.")<br>
     
     
