@@ -467,14 +467,60 @@ if isSaved:<br>
     print("the image is succesfully saved.")<br>
     
     
-    output:
+    output:<br>
     
-    ![image](https://user-images.githubusercontent.com/99865210/178954894-fcdea585-1676-4145-92d6-2855fca5b508.png)
+    ![image](https://user-images.githubusercontent.com/99865210/178954894-fcdea585-1676-4145-92d6-2855fca5b508.png)<br>
 
+ program :22 histogram pgm<br>
+ 
+ 
+    from skimage import io
+import matplotlib.pyplot as plt
+image = io.imread('a3.jpg')
+ax = plt.hist(image.ravel(), bins = 256)
+plt.show()
     
+    output:![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
+    <br>
+    <br>
+    from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('a3.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count') <br>
+plt.show()<br>
+<br>
+output:![image](https://use<br>r-images.githubusercontent.com/99865210/178966669-d87c06af-3e6b-4be1-8792-cf9f01244280.png)
+<br>
     
-    
-    
+import cv2<br>
+import numpy as np<br>
+img  = cv2.imread('a3.jpg',0)<br>
+hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
+plt.hist(img.ravel(),256,[0,256])<br>
+plt.show()<br>
+
+output:![image](https://user-images.githubusercontent.com/99865210/178967163-01e5fdea-4940-40da-a2b4-d01766e81918.png)<br>
+import numpy as np<br>
+import cv2 as cv<br>
+from matplotlib import pyplot as plt<br>
+img = cv.imread('a3.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img = cv.imread('a3.jpg',0)<br>
+plt.hist(img.ravel(),256,[0,256]);<br>
+plt.show()<br>
+
+output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c70083-3b77-4518-a9c1-31fdb00ef395.png)<br>
+
+![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)<br>
+
+
+
+
+output:![image](https://user-images.githubusercontent.com/99865210/178967016-aa968ced-7293-4669-ad1b-c3a8d527ba5c.png)<br>
+
     
     
     
