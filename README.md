@@ -467,9 +467,9 @@ if isSaved:<br>
     print("the image is succesfully saved.")<br>
     
     
-    output:<br>
-    
-    ![image](https://user-images.githubusercontent.com/99865210/178954894-fcdea585-1676-4145-92d6-2855fca5b508.png)<br>
+ ![image](https://user-images.githubusercontent.com/99865210/178970338-3cf80440-42e2-4ba5-a8ec-c414d2d0edcc.png)
+
+
 ******************************************************************************************************************************************************************
  program :22 histogram pgm<br>
  
@@ -480,7 +480,7 @@ image = io.imread('a3.jpg')
 ax = plt.hist(image.ravel(), bins = 256)
 plt.show()
     
-    output:![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
+    output: ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
     <br>
 ********************************************************************************************************************************************************************
     <br>
