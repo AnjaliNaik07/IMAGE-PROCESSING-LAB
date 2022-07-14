@@ -257,21 +257,23 @@ output:![image](https://user-images.githubusercontent.com/99865210/175288992-353
 **********************************************************************************************************************************************************
 program:Develop a pgm to change the image to different color spaces<br>
 
-import cv2 <br>
-img=cv2.imread('D:\\rabbit.jpg')<br>
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
-cv2.imshow("GRAY image",gray)<br>
-cv2.imshow("HSV image",hsv)<br>
-cv2.imshow("LAB image",lab)<br>
-cv2.imshow("HLS image",hls)<br>
-cv2.imshow("YUV image",yuv)<br>
-cv2.waitKey(0)<br>
-cv2.destroyAllWindows()<br>
+import cv2
+img=cv2.imread('D:\STUDENT\DataSet\images.jpg')<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+cv2.imshow("GRAY image",gray)
+cv2.imshow("HSV image",hsv)
+cv2.imshow("LAB image",lab)
+cv2.imshow("HLS image",hls)
+cv2.imshow("YUV image",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 <br>
-output:<br>
+output:<br>![image](https://user-images.githubusercontent.com/99865210/178957793-001684d5-f0f8-40ae-8438-f497f586b5e8.png)<br>
+
 
 
 ***************************************************************************************************************************************************************
