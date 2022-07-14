@@ -451,7 +451,7 @@ plt.title('Graylevel slicing w/o background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br><br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/178948588-e0860174-f9f1-4e9e-83ba-a3ea84490626.png)<br>
+output:![image](https://user-images.githubusercontent.com/99865210/178948588-e0860174-f9f1-4e9e-83ba-a3ea84490626.png)
 ****************************************************************************************************************************************************************
 
 program :21<br><br>
@@ -502,7 +502,7 @@ hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
 plt.hist(img.ravel(),256,[0,256])<br>
 plt.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/178967163-01e5fdea-4940-40da-a2b4-d01766e81918.png)<br>
+output:![image](https://user-images.githubusercontent.com/99865210/178967163-01e5fdea-4940-40da-a2b4-d01766e81918.png)
 ***************************************
 import numpy as np<br>
 import cv2 as cv<br>
