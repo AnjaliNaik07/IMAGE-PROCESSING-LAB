@@ -578,5 +578,43 @@ plt.axis('off');
 output:![image](https://user-images.githubusercontent.com/99865210/179954778-bbd2a9ce-eed3-44c2-80db-311ed25372a7.png)
 
 
+*****************************************************************
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+my_image=Image.open('a3.jpg')
+sharp =my_image.filter(ImageFilter.SHARPEN)
+sharp.save('D:/image_sharpen.jpg')
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+
+output:![image](https://user-images.githubusercontent.com/99865210/179955996-e8150ad0-508f-43aa-a12b-5c2765212a96.png)
+
+********************************************************************
+import matplotlib.pyplot as plt
+img=Image.open('a3.jpg')
+plt.imshow(img)
+plt.show()
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)
+flip.save('D:/image_flip.jpg')
+plt.imshow(flip)
+plt.show()
+
+output:![image](https://user-images.githubusercontent.com/99865210/179956169-7cb7cdaa-d709-4eb9-9d60-b9bd3a3c52c3.png)
+![image](https://user-images.githubusercontent.com/99865210/179956223-16573f6c-17c8-4ed0-b671-80beb7ed199e.png)
+
+******************************************************************
+
+from PIL import Image
+import matplotlib.pyplot as plt
+im = Image.open('a3.jpg')
+width,height = im.size
+im1 = im.crop((280,200,800,700))
+im1.show()
+plt.imshow(im1)
+plt.show()
+
+output:![image](https://user-images.githubusercontent.com/99865210/179956342-7617a524-1d2f-4326-9e8d-69d66ec11691.png)
 
 
