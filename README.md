@@ -474,12 +474,25 @@ if isSaved:<br>
  program :22 histogram pgm<br>
  
  
-    from skimage import io
-import matplotlib.pyplot as plt
-image = io.imread('a3.jpg')
-ax = plt.hist(image.ravel(), bins = 256)
-plt.show()
-    output:
+    from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('a3.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+plt.show()<br>
+    output:<br>
+    from skimage import io<br><br>
+
+import matplotlib.pyplot as plt<br><br>
+
+image = io.imread('a3.jpg')<br><br>
+
+ax = plt.hist(image.ravel(), bins = 256)<br><br>
+
+plt.show()<br><br>
+
+    output:<br><br>
+
+    ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)<br>
     ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
 ********************************************************************************************************************************************************************
     <br>
@@ -518,103 +531,103 @@ output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c
 ![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)<br>
 
 ********************************************************************************************************************************************************************
-
-Program to perform basic image data analysis using intensity transformation:
-a) Image negative
-b) Log transformation
-c) Gamma correction
-
-
-%matplotlib inline
-import imageio
-import matplotlib.pyplot as plt
-import warnings
-import matplotlib.cbook
-warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
-pic=imageio.imread('b1.jpg')
-plt.figure(figsize=(6,6))
-plt.imshow(pic);
-plt.axis('off');
+<br>
+Program to perform basic image data analysis using intensity transformation:<br>
+a) Image negative<br>
+b) Log transformation<br>
+c) Gamma correction<br>
 
 
-output:![image](https://user-images.githubusercontent.com/99865210/179951461-b0e17290-f853-4de5-83b0-151e50bc2c79.png)
+%matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('b1.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
+
+
+output:![image](https://user-images.githubusercontent.com/99865210/179951461-b0e17290-f853-4de5-83b0-151e50bc2c79.png)<br>
 
 ****************************************************
+<br>
+negative=255-pic <br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
 
-negative=255-pic 
-plt.figure(figsize=(6,6))
-plt.imshow(negative);
-plt.axis('off');
-
-output:  ![image](https://user-images.githubusercontent.com/99865210/179951636-9f4e79f3-53f6-471e-be12-33c757e05d82.png)
+output:  ![image](https://user-images.githubusercontent.com/99865210/179951636-9f4e79f3-53f6-471e-be12-33c757e05d82.png)<br>
 ***************************************************
-
-%matplotlib inline
-import imageio
-import numpy as np
-import matplotlib.pyplot as plt
-pic=imageio.imread('b1.jpg')
-gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
-gray=gray(pic)
-max_=np.max(gray)
-def log_transform():
-    return(255/np.log(1+max_))*np.log(1+gray)
-plt.figure(figsize=(5,5))
-plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
-plt.axis('off');
+<br>
+%matplotlib inline<br>
+import imageio<br><br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('b1.jpg')<br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+max_=np.max(gray)<br>
+def log_transform():<br>
+    return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
     
-   output:![image](https://user-images.githubusercontent.com/99865210/179951714-733564cf-0052-40d1-a6f1-9dfb4eb91ab7.png)
+   output:![image](https://user-images.githubusercontent.com/99865210/179951714-733564cf-0052-40d1-a6f1-9dfb4eb91ab7.png)<br>
    **************************************************
  
-import imageio 
-import matplotlib.pyplot as plt
-pic=imageio.imread('b1.jpg')
-gamma=2.2
-gamma_correction=((pic/255)**(1/gamma))
-plt.figure(figsize=(5,5))
-plt.imshow(gamma_correction)
-plt.axis('off');
+import imageio<br> <br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('b1.jpg')<br>
+gamma=2.2<br>
+gamma_correction=((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/179954778-bbd2a9ce-eed3-44c2-80db-311ed25372a7.png)
+output:![image](https://user-images.githubusercontent.com/99865210/179954778-bbd2a9ce-eed3-44c2-80db-311ed25372a7.png)<br>
 
 
 *****************************************************************
-from PIL import Image
-from PIL import ImageFilter
-import matplotlib.pyplot as plt
-my_image=Image.open('a3.jpg')
-sharp =my_image.filter(ImageFilter.SHARPEN)
-sharp.save('D:/image_sharpen.jpg')
-sharp.show()
-plt.imshow(sharp)
-plt.show()
-
-output:![image](https://user-images.githubusercontent.com/99865210/179955996-e8150ad0-508f-43aa-a12b-5c2765212a96.png)
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+my_image=Image.open('a3.jpg')<br>
+sharp =my_image.filter(ImageFilter.SHARPEN)<br>
+sharp.save('D:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+<br>
+output:![image](https://user-images.githubusercontent.com/99865210/179955996-e8150ad0-508f-43aa-a12b-5c2765212a96.png)<br>
 
 ********************************************************************
-import matplotlib.pyplot as plt
-img=Image.open('a3.jpg')
-plt.imshow(img)
-plt.show()
-flip=img.transpose(Image.FLIP_LEFT_RIGHT)
-flip.save('D:/image_flip.jpg')
-plt.imshow(flip)
-plt.show()
+import matplotlib.pyplot as plt<br>
+img=Image.open('a3.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+flip.save('D:/image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/179956169-7cb7cdaa-d709-4eb9-9d60-b9bd3a3c52c3.png)
-![image](https://user-images.githubusercontent.com/99865210/179956223-16573f6c-17c8-4ed0-b671-80beb7ed199e.png)
+output:![image](https://user-images.githubusercontent.com/99865210/179956169-7cb7cdaa-d709-4eb9-9d60-b9bd3a3c52c3.png)<br>
+![image](https://user-images.githubusercontent.com/99865210/179956223-16573f6c-17c8-4ed0-b671-80beb7ed199e.png)<br>
 
 ******************************************************************
+<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+im = Image.open('a3.jpg')<br>
+width,height = im.size<br>
+im1 = im.crop((280,200,800,700))<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
 
-from PIL import Image
-import matplotlib.pyplot as plt
-im = Image.open('a3.jpg')
-width,height = im.size
-im1 = im.crop((280,200,800,700))
-im1.show()
-plt.imshow(im1)
-plt.show()
-
-output:![image](https://user-images.githubusercontent.com/99865210/179956342-7617a524-1d2f-4326-9e8d-69d66ec11691.png)
+output:![image](https://user-images.githubusercontent.com/99865210/179956342-7617a524-1d2f-4326-9e8d-69d66ec11691.png)<br>
 
 
