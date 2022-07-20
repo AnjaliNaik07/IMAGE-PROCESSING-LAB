@@ -513,16 +513,58 @@ img = cv.imread('a3.jpg',0)<br>
 plt.hist(img.ravel(),256,[0,256]);<br>
 plt.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c70083-3b77-4518-a9c1-31fdb00ef395.png)
+output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c70083-3b77-4518-a9c1-31fdb00ef395.png)<br>
 
-![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)
+![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)<br>
+
+********************************************************************************************************************************************************************
+
+Program to perform basic image data analysis using intensity transformation:
+a) Image negative
+b) Log transformation
+c) Gamma correction
 
 
+%matplotlib inline
+import imageio
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('b1.jpg')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
 
 
+output:![image](https://user-images.githubusercontent.com/99865210/179951461-b0e17290-f853-4de5-83b0-151e50bc2c79.png)
 
+****************************************************
+
+negative=255-pic 
+plt.figure(figsize=(6,6))
+plt.imshow(negative);
+plt.axis('off');
+
+output:  ![image](https://user-images.githubusercontent.com/99865210/179951636-9f4e79f3-53f6-471e-be12-33c757e05d82.png)
+***************************************************
+
+%matplotlib inline
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+pic=imageio.imread('b1.jpg')
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
+gray=gray(pic)
+max_=np.max(gray)
+def log_transform():
+    return(255/np.log(1+max_))*np.log(1+gray)
+plt.figure(figsize=(5,5))
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
+plt.axis('off');
     
-    
+   output:![image](https://user-images.githubusercontent.com/99865210/179951714-733564cf-0052-40d1-a6f1-9dfb4eb91ab7.png)
+ 
     
  
 
