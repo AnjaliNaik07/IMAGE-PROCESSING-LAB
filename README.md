@@ -352,27 +352,26 @@ output:![image](https://user-images.githubusercontent.com/99865210/176406914-372
 
 ******************************************************************************************************************************************************************
 program 17:Image Enhancement<br>
-from PIL import Image<br>
-from PIL import ImageEnhance<br>
-image=Image.open('a4.jpg')<br>
-image.show()<br>
-enh_bri=ImageEnhance.Brightness(image)<br><br>
-brightness=1.5<br>
-image_brightened=enh_bri.enhance(brightness)<br>
-image_brightened.show()<br>
-enh_col=ImageEnhance.Color(image)<br>
-color=1.5<br>
-image_colored=enh_col.enhance(color)<br>
-image_colored.show()<br>
-enh_con=ImageEnhance.contrast(image)<br>
-contrast=1.5<br>
-image_contrasted=enh_con.enhance(contrast)<br>
-image_contrasted.show()<br>
-enh_sha=ImageEnhance.Sharpness(image)<br>
-sharpness=3.0<br>
-image_sharped=enh_sha.enhance(sharpness)<br>
-image_sharped.show()<br>
-
+from PIL import Image
+from PIL import ImageEnhance
+image=Image.open('a3.jpg')
+image.show()
+enh_bri=ImageEnhance.Brightness(image)
+brightness=1.5
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()
+enh_col=ImageEnhance.Color(image)
+color=1.5
+image_colored=enh_col.enhance(color)
+image_colored.show()
+enh_con=ImageEnhance.Contrast(image)
+contrast=1.5
+image_contarsted=enh_con.enhance(contrast)
+image_contarsted.show()
+enh_sha=ImageEnhance.Sharpness(image)
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)
+image_sharped.show()
 
 
 
