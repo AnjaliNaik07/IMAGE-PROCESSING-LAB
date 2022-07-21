@@ -630,3 +630,22 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/179956342-7617a524-1d2f-4326-9e8d-69d66ec11691.png)<br>
 
 
+**************************************************************************
+program:matrix to image
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+w, h = 600, 600
+data = np.zeros((h, w, 3), dtype=np.uint8)
+data[0:100, 0:100] = [255, 0, 0]
+data[100:200, 100:200] = [0,255, 0]
+data[200:300, 200:300] = [0, 0, 255]
+data[300:400, 300:400] = [255, 70, 0]
+data[400:500, 400:500] = [255,120, 0]
+data[500:600, 500:600] = [ 255, 255, 0]
+      #len     width
+img = Image.fromarray(data, 'RGB')
+plt.imshow(img)
+plt.show()
+
+output:![image](https://user-images.githubusercontent.com/99865210/180202389-a1473ec4-7cb2-4198-8d60-ac0addda21c9.png)
