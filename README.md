@@ -631,11 +631,11 @@ output:![image](https://user-images.githubusercontent.com/99865210/179956342-761
 
 
 **************************************************************************
-program:matrix to image
-from PIL import Image
+program:matrix to image<br>
+from PIL import Image<br>
 import numpy as np
 import matplotlib.pyplot as plt
-w, h = 600, 600
+w, h = 600, 600<br><br>
 data = np.zeros((h, w, 3), dtype=np.uint8)
 data[0:100, 0:100] = [255, 0, 0]
 data[100:200, 100:200] = [0,255, 0]
@@ -649,3 +649,34 @@ plt.imshow(img)
 plt.show()
 
 output:![image](https://user-images.githubusercontent.com/99865210/180202389-a1473ec4-7cb2-4198-8d60-ac0addda21c9.png)
+
+
+program: central pixel expamding by increasing its values
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+arr = np.zeros((256,256,3), dtype=np.uint8)
+imgsize = arr.shape[:2]
+innerColor = (255, 255, 255)
+outerColor = (255, 0, 0)
+for y in range(imgsize[1]):
+    for x in range(imgsize[0]):
+        #Find the distance to the center
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)
+
+        #Make it on a scale from 0 to 1innerColor
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)
+
+        #Calculate r, g, and b values
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)
+        # print r, g, b
+        arr[y, x] = (int(r), int(g), int(b))
+
+plt.imshow(arr, cmap='gray')<br>
+plt.show()<br>
+
+
+output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f8cbca-3980-468b-a992-040da35d8458.png)
