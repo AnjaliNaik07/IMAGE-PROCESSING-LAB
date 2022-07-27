@@ -779,7 +779,19 @@ print(min_channels)
 
 output:![image](https://user-images.githubusercontent.com/99865210/181224479-5e6f0399-0be8-4f4b-ae54-c5c24559a70d.png)
 
+*****************************************************************
+import numpy as np
+x = np.ones((3, 3))
+x[1:-1, 1:-1] = 0
+x = np.pad(x, pad_width=1, mode='constant', constant_values=2)
+print(x)
 
+
+output:[[2. 2. 2. 2. 2.]
+ [2. 1. 1. 1. 2.]
+ [2. 1. 0. 1. 2.]
+ [2. 1. 1. 1. 2.]
+ [2. 2. 2. 2. 2.]]
 
 
 
