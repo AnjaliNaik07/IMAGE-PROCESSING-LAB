@@ -680,3 +680,109 @@ plt.show()<br>
 
 
 output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f8cbca-3980-468b-a992-040da35d8458.png)<br>
+
+
+program:   to perform matrix operation on pixels
+
+import numpy as np
+# Create matrix
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+# Return maximum element
+np.max(matrix)
+
+output: 9
+
+**************************************************
+import numpy as np
+# Create matrix
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+# Return maximum element
+np.min(matrix)
+
+
+output:1
+
+***************************************************
+
+
+# example of pixel normalization
+from numpy import asarray
+from PIL import Image
+# load image
+image = Image.open('b3.jpg')
+pixels = asarray(image)
+# confirm pixel range is 0-255
+#print('Data Type: %s' % pixels.dtype)
+print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))
+# convert from integers to floats
+pixels = pixels.astype('float32')
+# normalize to the range 0-1
+pixels /= 255.0
+# confirm the normalization
+print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))
+
+output:Min: 0.000, Max: 255.000
+Min: 0.000, Max: 1.000
+
+
+*************************************************************
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img=cv2.imread("b3.jpg",0)
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.imshow(img)
+np.average(img)
+
+
+output:149.67725119422806
+![image](https://user-images.githubusercontent.com/99865210/181223879-6758a0b3-7704-4035-a98c-f0b44e629393.png)
+**************************************************************
+
+
+from PIL import Image,ImageStat
+import matplotlib.pyplot as plt
+im=Image.open('b3.jpg')
+plt.imshow(im)
+plt.show()
+stat=ImageStat.Stat(im)
+print(stat.stddev)
+
+output:![image](https://user-images.githubusercontent.com/99865210/181224057-1080980e-c515-4b1c-93a9-7469ce74dbd9.png)
+[66.13053575068778, 68.6403333951999, 70.05475170427705]
+***********************************************************
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+img=imageio.imread('a3.jpg' )
+plt.imshow(img)
+plt.show()
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])
+
+print(max_channels)
+
+output:![image](https://user-images.githubusercontent.com/99865210/181224248-790d3226-e189-42ca-9685-40b22abdcd79.png)
+************************************************************
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+img=imageio.imread('a3.jpg' )
+plt.imshow(img)
+plt.show()
+min_channels = np.amin([np.amin(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])
+
+print(min_channels)
+
+output:![image](https://user-images.githubusercontent.com/99865210/181224479-5e6f0399-0be8-4f4b-ae54-c5c24559a70d.png)
+
+
+
+
+
+
+
+
