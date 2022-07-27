@@ -633,50 +633,50 @@ output:![image](https://user-images.githubusercontent.com/99865210/179956342-761
 **************************************************************************
 program:matrix to image<br>
 from PIL import Image<br>
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
 w, h = 600, 600<br><br>
-data = np.zeros((h, w, 3), dtype=np.uint8)
-data[0:100, 0:100] = [255, 0, 0]
-data[100:200, 100:200] = [0,255, 0]
-data[200:300, 200:300] = [0, 0, 255]
-data[300:400, 300:400] = [255, 70, 0]
-data[400:500, 400:500] = [255,120, 0]
-data[500:600, 500:600] = [ 255, 255, 0]
+data = np.zeros((h, w, 3), dtype=np.uint8<br>
+data[0:100, 0:100] = [255, 0, 0]<br>
+data[100:200, 100:200] = [0,255, 0]<br><br>
+data[200:300, 200:300] = [0, 0, 255]<br><br>
+data[300:400, 300:400] = [255, 70, 0]<br><br>
+data[400:500, 400:500] = [255,120, 0]<br><br>
+data[500:600, 500:600] = [ 255, 255, 0]<br><br>
       #len     width
-img = Image.fromarray(data, 'RGB')
-plt.imshow(img)
-plt.show()
+img = Image.fromarray(data, 'RGB')<br>
+plt.imshow(img)<br>
+plt.show()<br>
 
-output:![image](https://user-images.githubusercontent.com/99865210/180202389-a1473ec4-7cb2-4198-8d60-ac0addda21c9.png)
+output:![image](https://user-images.githubusercontent.com/99865210/180202389-a1473ec4-7cb2-4198-8d60-ac0addda21c9.png)<br>
 
 
-program: central pixel expamding by increasing its values
+program: central pixel expamding by increasing its values<br>
 
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
 
-arr = np.zeros((256,256,3), dtype=np.uint8)
-imgsize = arr.shape[:2]
-innerColor = (255, 255, 255)
-outerColor = (255, 0, 0)
-for y in range(imgsize[1]):
-    for x in range(imgsize[0]):
-        #Find the distance to the center
-        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)
+arr = np.zeros((256,256,3), dtype=np.uint8)<br>
+imgsize = arr.shape[:2]<br>
+innerColor = (255, 255, 255)<br>
+outerColor = (255, 0, 0)<br>
+for y in range(imgsize[1]):<br>
+    for x in range(imgsize[0]):<br>
+        #Find the distance to the center<br>
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
 
-        #Make it on a scale from 0 to 1innerColor
-        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)
+        #Make it on a scale from 0 to 1innerColor<br>
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
 
-        #Calculate r, g, and b values
-        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)
-        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)
-        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)
-        # print r, g, b
-        arr[y, x] = (int(r), int(g), int(b))
+        #Calculate r, g, and b values<br>
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+        # print r, g, b<br>
+        arr[y, x] = (int(r), int(g), int(b))<br>
 
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 
 
-output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f8cbca-3980-468b-a992-040da35d8458.png)
+output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f8cbca-3980-468b-a992-040da35d8458.png)<br>
