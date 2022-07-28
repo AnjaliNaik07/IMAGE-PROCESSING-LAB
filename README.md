@@ -833,4 +833,23 @@ output:
 3 2 2 2 2 2 3 
 3 3 3 3 3 3 3 
 
+***************************************************************************
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+array_colors = np.array([[[255, 0, 0], 
+                         [0, 255, 0],
+                         [0, 0, 255]],
+                         [[255, 168, 0], 
+                    [255, 255, 0],
+                    [128, 128, 128]],
+                    [[255, 212, 0], 
+                    [255, 0, 255],
+                    [240, 152, 255]],
+                    ])
+plt.imshow(array_colors);
+np.min(array_colors)
+
+output:![image](https://user-images.githubusercontent.com/99865210/181448313-8ce56177-c099-4156-bcf9-470d37376908.png)
 
