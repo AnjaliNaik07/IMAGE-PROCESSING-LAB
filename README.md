@@ -824,8 +824,8 @@ def printPattern(n):
 n = 4;
  
 printPattern(n);
-
-output:3 3 3 3 3 3 3 
+output:
+3 3 3 3 3 3 3 
 3 2 2 2 2 2 3 
 3 2 1 1 1 2 3 
 3 2 1 0 1 2 3 
