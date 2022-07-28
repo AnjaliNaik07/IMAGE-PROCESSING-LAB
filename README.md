@@ -702,8 +702,6 @@ matrix = np.array([[1, 2, 3],<br>
                    [7, 8, 9]])<br>
 # Return maximum element<br>
 np.min(matrix)<br>
-
-
 output:1<br>
 
 ***************************************************
