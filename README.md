@@ -645,6 +645,8 @@ plt.show()<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/180202389-a1473ec4-7cb2-4198-8d60-ac0addda21c9.png)<br>
 
+![image](https://user-images.githubusercontent.com/99865210/183861603-a78f9c2e-320a-419b-9a45-4e9cfe33925d.png)<br>
+
 ********************************************************************************************
 program: central pixel expamding by increasing its values<br>
 
