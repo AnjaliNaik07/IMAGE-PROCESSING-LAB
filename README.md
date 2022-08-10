@@ -352,26 +352,26 @@ output:![image](https://user-images.githubusercontent.com/99865210/176406914-372
 
 ******************************************************************************************************************************************************************
 program 17:Image Enhancement<br>
-from PIL import Image
-from PIL import ImageEnhance
-image=Image.open('a3.jpg')
-image.show()
-enh_bri=ImageEnhance.Brightness(image)
-brightness=1.5
-image_brightened=enh_bri.enhance(brightness)
-image_brightened.show()
-enh_col=ImageEnhance.Color(image)
-color=1.5
-image_colored=enh_col.enhance(color)
-image_colored.show()
-enh_con=ImageEnhance.Contrast(image)
-contrast=1.5
-image_contarsted=enh_con.enhance(contrast)
-image_contarsted.show()
-enh_sha=ImageEnhance.Sharpness(image)
-sharpness=3.0
-image_sharped=enh_sha.enhance(sharpness)
-image_sharped.show()
+from PIL import Image<br><br>
+from PIL import ImageEnhance<br>
+image=Image.open('a3.jpg')<br>
+image.show()<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)<br><br>
+image_brightened.show()<br>
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contarsted=enh_con.enhance(contrast)<br>
+image_contarsted.show()<br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=3.0<br>
+image_sharped=enh_sha.enhance(sharpness)<br>
+image_sharped.show()<br>
 
 
 
@@ -473,29 +473,24 @@ if isSaved:<br>
  program :22 histogram pgm<br>
  
  
-    from skimage import io<br>
+from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 image = io.imread('a3.jpg')<br>
 ax = plt.hist(image.ravel(), bins = 256)<br>
 plt.show()<br>
-    output:<br>
-    from skimage import io<br><br>
-
+output: <br>
+from skimage import io<br><br>
 import matplotlib.pyplot as plt<br><br>
-
 image = io.imread('a3.jpg')<br><br>
-
 ax = plt.hist(image.ravel(), bins = 256)<br><br>
-
 plt.show()<br><br>
-
-    output:<br><br>
+output:<br><br>
 
     ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)<br>
     ![image](https://user-images.githubusercontent.com/99865210/178966495-34f9e055-5a17-4bee-a178-24a32d26664a.png)
 ********************************************************************************************************************************************************************
-    <br>
-    from skimage import io<br>
+   
+from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 image = io.imread('a3.jpg')<br>
 ax = plt.hist(image.ravel(), bins = 256)<br>
@@ -650,12 +645,11 @@ plt.show()<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/180202389-a1473ec4-7cb2-4198-8d60-ac0addda21c9.png)<br>
 
-
+********************************************************************************************
 program: central pixel expamding by increasing its values<br>
 
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
-
 arr = np.zeros((256,256,3), dtype=np.uint8)<br>
 imgsize = arr.shape[:2]<br>
 innerColor = (255, 255, 255)<br>
@@ -674,15 +668,12 @@ for y in range(imgsize[1]):<br>
         b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
         # print r, g, b<br>
         arr[y, x] = (int(r), int(g), int(b))<br>
-
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
-
-
 output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f8cbca-3980-468b-a992-040da35d8458.png)<br>
 
 
-program:   to perform matrix operation on pixels<br>
+program:  to perform matrix operation on pixels<br>
 
 import numpy as np<br>
 # Create matrix<br>
@@ -702,6 +693,7 @@ matrix = np.array([[1, 2, 3],<br>
                    [7, 8, 9]])<br>
 # Return maximum element<br>
 np.min(matrix)<br>
+
 output:1<br>
 
 ***************************************************
@@ -740,8 +732,6 @@ np.average(img)<br>
 output:149.67725119422806<br>
 ![image](https://user-images.githubusercontent.com/99865210/181223879-6758a0b3-7704-4035-a98c-f0b44e629393.png)<br>
 **************************************************************
-
-
 from PIL import Image,ImageStat<br>
 import matplotlib.pyplot as plt<br>
 im=Image.open('b3.jpg')<br>
@@ -749,7 +739,6 @@ plt.imshow(im)<br>
 plt.show()<br>
 stat=ImageStat.Stat(im)<br>
 print(stat.stddev)<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/181224057-1080980e-c515-4b1c-93a9-7469ce74dbd9.png)<br>
 [66.13053575068778, 68.6403333951999, 70.05475170427705]<br>
 ***********************************************************
@@ -760,7 +749,6 @@ img=imageio.imread('a3.jpg' )<br>
 plt.imshow(img)<br>
 plt.show()<br>
 max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
-
 print(max_channels)<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/181224248-790d3226-e189-42ca-9685-40b22abdcd79.png)<br>
@@ -772,7 +760,6 @@ img=imageio.imread('a3.jpg' )<br>
 plt.imshow(img)<br>
 plt.show()<br>
 min_channels = np.amin([np.amin(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
-
 print(min_channels)<br>
 
 output:![image](https://user-images.githubusercontent.com/99865210/181224479-5e6f0399-0be8-4f4b-ae54-c5c24559a70d.png)<br>
@@ -790,66 +777,60 @@ output:[[2. 2. 2. 2. 2.]<br>
  [2. 1. 0. 1. 2.]<br>
  [2. 1. 1. 1. 2.]<br>
  [2. 2. 2. 2. 2.]]<br>
-
-
-
 ***********************************************************************************
-
-
-# Python3 program for printing the rectangular pattern
+# Python3 program for printing the rectangular pattern<br>
+# Function to print the pattern<br>
+def printPattern(n):<br>
  
-# Function to print the pattern
-def printPattern(n):
- 
-    arraySize = n * 2 - 1;
-    result = [[0 for x in range(arraySize)]
-                 for y in range(arraySize)];
+    arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
          
-    # Fill the values
+    # Fill the values<br>
     for i in range(arraySize):
-        for j in range(arraySize):
-            if(abs(i - (arraySize // 2)) >
-               abs(j - (arraySize // 2))):
-                result[i][j] = abs(i - (arraySize // 2));
-            else:
-                result[i][j] = abs(j - (arraySize // 2));
+        for j in range(arraySize):<br>
+            if(abs(i - (arraySize // 2)) ><br>
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2));<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2));<br>
              
-    # Print the array
-    for i in range(arraySize):
-        for j in range(arraySize):
-            print(result[i][j], end = " ");
-        print("");
+    # Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
+        print("");<br>
  
-# Driver Code
-n = 4;
+# Driver Code<br><br><br>
+n = 4;<br>
  
-printPattern(n);
-output:
-3 3 3 3 3 3 3 
-3 2 2 2 2 2 3 
-3 2 1 1 1 2 3 
-3 2 1 0 1 2 3 
-3 2 1 1 1 2 3 
-3 2 2 2 2 2 3 
-3 3 3 3 3 3 3 
+printPattern(n);<br><br>
+output:<br><br>
+3 3 3 3 3 3 3 <br><br>
+3 2 2 2 2 2 3 <br><br>
+3 2 1 1 1 2 3 <br><br>
+3 2 1 0 1 2 3 <br><br>
+3 2 1 1 1 2 3 <br><br>
+3 2 2 2 2 2 3<br><br> 
+3 3 3 3 3 3 3 <br><br>
 
 ***************************************************************************
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
 
 
-array_colors = np.array([[[255, 0, 0], 
-                         [0, 255, 0],
-                         [0, 0, 255]],
-                         [[255, 168, 0], 
-                    [255, 255, 0],
-                    [128, 128, 128]],
-                    [[255, 212, 0], 
-                    [255, 0, 255],
-                    [240, 152, 255]],
-                    ])
-plt.imshow(array_colors);
-np.min(array_colors)
-
-output:![image](https://user-images.githubusercontent.com/99865210/181448313-8ce56177-c099-4156-bcf9-470d37376908.png)
+array_colors = np.array([[[255, 0, 0], <br>
+                         [0, 255, 0],<br>
+                         [0, 0, 255]],<br>
+                         [[255, 168, 0],<br> 
+                    [255, 255, 0],<br>
+                    [128, 128, 128]],<br>
+                    [[255, 212, 0], <br>
+                    [255, 0, 255],<br>
+                    [240, 152, 255]],<br>
+                    ])<br>
+plt.imshow(array_colors);<br>
+np.min(array_colors)<br>
+<br>
+output:![image](https://user-images.githubusercontent.com/99865210/181448313-8ce56177-c099-4156-bcf9-470d37376908.png)<br>
 
