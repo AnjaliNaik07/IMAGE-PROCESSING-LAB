@@ -152,7 +152,7 @@ output :![9opt](https://user-images.githubusercontent.com/99865210/174051559-50d
  *****************************************************************************************************************************************************************
  22/06/2022<br>
  
- program 1:To dread image using url<br><br>
+ program 10:To dread image using url<br><br>
         from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAz7oRpSnwGnBO2p64jeZKA6b0ULoNEII0w&usqp=CAU.jpg'<br>
@@ -163,7 +163,7 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
 
 ******************************************************************************************************************************************************************
-program 3: To perform arthemetic operations<br>
+program 11: To perform arthemetic operations<br>
 import cv2<br><br>
 import matplot<br>lib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -193,7 +193,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd7
 
 ****************************************************************************************************************************************************
 
-program 2:mask and blurr<br>
+program 12:mask and blurr<br>
 
 
 import cv2<br>
@@ -216,9 +216,6 @@ plt.subplot(1,2,2)<br>
 plt.imshow(result)<br>
 plt.show()<br>
  output:
- <br>
-
-<br>
 ![image](https://user-images.githubusercontent.com/99865210/175288488-b88bba43-c045-41b5-843d-3657910c7df7.png)<br>
 <br>
 ![image](https://user-images.githubusercontent.com/99865210/175288507-d8a4faaf-f3dd-41da-9c9f-30e116c25e21.png)<br>
@@ -236,6 +233,7 @@ plt.imshow(mask_white,cmap='gray') <br>
 plt.subplot(1,2,2)<br>
 plt.imshow(result_white) <br>
 plt.show()<br>
+
 output:![image](https://user-images.githubusercontent.com/99865210/175288679-5a29e88c-c407-4527-97a4-04f2a7b96ee3.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/175288725-7d085d65-c1df-429c-ba28-0db33d724e38.png)<br>
 ********************************************************************************************************************************************
@@ -255,7 +253,7 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)<br>
 
 **********************************************************************************************************************************************************
-program:Develop a pgm to change the image to different color spaces<br>
+program 13:Develop a pgm to change the image to different color spaces<br>
 
 import cv2
 img=cv2.imread('D:\STUDENT\DataSet\images.jpg')<br><br>
@@ -277,7 +275,7 @@ output:<br>![image](https://user-images.githubusercontent.com/99865210/178957793
 
 
 ***************************************************************************************************************************************************************
-program 2 :program to create an image using 2D array<br>
+program 14 :program to create an image using 2D array<br>
 
 
 import cv2 as c <br>
@@ -297,9 +295,7 @@ output:<br>![image](https://user-images.githubusercontent.com/99865210/178955357
 
 
 ******************************************************************************************************************************************************************
-program: 15<br>
-
-Bitwise operation<br>
+program 15:Bitwise operation<br>
 
 import cv2<br>
 import matplotlib.pyplot as plt<br>
@@ -415,7 +411,7 @@ cv2.waitKey(0)<br>
 output:![image](https://user-images.githubusercontent.com/99865210/176419670-4c7310aa-e37f-4131-9644-5403dd59b901.png)<br>
 
 ***********************************************************************************************************************************************************************
-program :19<br> image with background<br>
+program 19: image with background<br>
 from PIL import Image<br>
 
 image_file = 'test.tiff'<br>
@@ -432,7 +428,7 @@ print(histo_string)<br>
  output:![image](https://user-images.githubusercontent.com/99865210/178947956-db39bd02-368f-49a8-a074-2cc95f95dd7c.png)<br>
  
  *****************************************************************************************************************************************************************
- program :20<br>image without background<br>
+ program 20: image without background<br>
  import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -453,7 +449,7 @@ plt.show()<br><br>
 output:![image](https://user-images.githubusercontent.com/99865210/178948588-e0860174-f9f1-4e9e-83ba-a3ea84490626.png)
 ****************************************************************************************************************************************************************
 
-program :21<br><br>
+program :21<br>
 import cv2<br>
 OriginalImg=cv2.imread('b2.jpg')<br>
 GrayImg=cv2.imread('b2.jpg',0)<br>
@@ -472,8 +468,7 @@ if isSaved:<br>
 ******************************************************************************************************************************************************************
  program :22 histogram pgm<br>
  
- 
-from skimage import io<br>
+ from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 image = io.imread('a3.jpg')<br>
 ax = plt.hist(image.ravel(), bins = 256)<br>
@@ -525,8 +520,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/178967295-f1c
 ![image](https://user-images.githubusercontent.com/99865210/178967331-d7c62680-f109-458a-895f-cad6259be765.png)<br>
 
 ********************************************************************************************************************************************************************
-<br>
-Program to perform basic image data analysis using intensity transformation:<br>
+Program 23:to perform basic image data analysis using intensity transformation:<br>
 a) Image negative<br>
 b) Log transformation<br>
 c) Gamma correction<br>
@@ -626,7 +620,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/179956342-761
 
 
 **************************************************************************
-program:matrix to image<br>
+program 24:matrix to image<br>
 from PIL import Image<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
@@ -648,7 +642,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/180202389-a14
 ![image](https://user-images.githubusercontent.com/99865210/183861603-a78f9c2e-320a-419b-9a45-4e9cfe33925d.png)<br>
 
 ********************************************************************************************
-program: central pixel expamding by increasing its values<br>
+program 25: central pixel expamding by increasing its values<br>
 
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
@@ -675,7 +669,7 @@ plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f8cbca-3980-468b-a992-040da35d8458.png)<br>
 
 
-program:  to perform matrix operation on pixels<br>
+program 26:  to perform matrix operation on pixels<br>
 
 import numpy as np<br>
 # Create matrix<br>
