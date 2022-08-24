@@ -830,3 +830,45 @@ np.min(array_colors)<br>
 <br>
 output:![image](https://user-images.githubusercontent.com/99865210/181448313-8ce56177-c099-4156-bcf9-470d37376908.png)<br>
 
+******************************************************************************************************************************************************************
+program  :Edge detection using open CV
+import cv2
+# Read the original image
+img = cv2.imread('lion2.jpg') 
+# Display original image
+cv2.imshow('Original', img)
+cv2.waitKey(0)
+
+# Convert to graycsale
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+# Blur the image for better edge detection
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0) 
+
+# Sobel Edge Detection
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection
+# Display Sobel Edge Detection Images
+cv2.imshow('Sobel X', sobelx)
+cv2.waitKey(0)
+cv2.imshow('Sobel Y', sobely)
+cv2.waitKey(0)
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)
+cv2.waitKey(0)
+# Canny Edge Detection
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection
+# Display Canny Edge Detection Image
+cv2.imshow('Canny Edge Detection', edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+output:![image](https://user-images.githubusercontent.com/99865210/186385183-691715f3-d55e-472d-bbce-50b07e772916.png)
+![image](https://user-images.githubusercontent.com/99865210/186385369-5c07ec3c-3337-4eec-b8e5-9ce4c98eefd4.png)
+![image](https://user-images.githubusercontent.com/99865210/186385495-1b2a83f4-b7d8-4a91-a6fa-e0a72e7e107e.png)
+![image](https://user-images.githubusercontent.com/99865210/186385640-2d00aac0-2f3e-4285-aa8e-ba44b8254425.png)
+![image](https://user-images.githubusercontent.com/99865210/186385787-2fe3cf67-b299-4952-b273-5b4585c33d6d.png)
+
+
+
+
+
