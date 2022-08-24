@@ -2,41 +2,30 @@
 
 
 program 1 : develop a program to display the Gray scale image using read and write  operation
-
 import cv2<br>
 img=cv2.imread('b1.jpg',0)<br>
 cv2.imshow('b1',img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllwindows()<br>
-
 output:![p1 op](https://user-images.githubusercontent.com/99865210/173809761-c66e0bbd-5701-451a-8a3d-5b32f00b0b17.png)
-******************************************************************************************************************************************************************
-
-
+*****************************************************************************************************************************************************************
 program  2: develop a program to display the image using MAtplot lib<br>
-
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
 img=mpimg.imread('img.jpg')<br>
 plt.imshow(img)<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/173810407-90c87e31-b982-447f-a650-7f18da4ece6c.png)<br>
 ********************************************************************************************************************************************************************
 program 3 :Develpo a program to perform a linear transformation rotation<br>
-
 from PIL import Image<br>
 img =Image.open("L1.jpg")<br>
 img=img.rotate(180)<br>
 img.show()<br>
 cv2.waitKey(0)<br>
 cv2.distroyAllwindows()<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/173816106-1bd26923-b5e7-4f13-86d6-0f058d75ccbb.png)<br>
-
-
-**********************************************************************************************************************************************************************
+*********************************************************************************************************************************************************************
 program 4: Develpo a program to convert color to RGB color values<br>
-
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yel<br><br>low")<br>
 print(img1)<br><br>
@@ -46,24 +35,18 @@ img3=ImageColor.getrgb("pink")<br><br>
 print(img3)<br><br>
 img4=ImageColor.getrgb("blue")<br><br>
 print(img4)<br><br>
-
 output:(255, 255, 0)<br>
 (255, 0, 0)<br>
 (255, 192, 203)<br>
 (0, 0, 255)<br>
 ***********************************************************************************************************************************************************************
 program 5:  Write a pgm to create image using a color from PIL import image<br>
-
 from PIL import Image<br>
 img=Image.new("RGB",(200,400),(0,0,255))<br>
 img.show()<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/173816410-cb6c56e3-bcdc-4071-a367-0630c472420f.png)<br>
-
-
 ***********************************************************************************************************************************************************************
 program 6:  Develop a program to visulate the image using various color spaces<br>
-<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 import numpy as np<br>
@@ -73,16 +56,11 @@ plt.show()<br>
 img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
 img=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
 plt.show()<br>
-
 output: ![image](https://user-images.githubusercontent.com/99865210/173813702-ca6d3deb-ab58-46c6-8c68-d7f03b330870.png)<br>
-
 output:  ![image](https://user-images.githubusercontent.com/99865210/173816669-5892b36c-39c6-41b3-9348-20722de0186d.png)<br>
-
 output:    ![image](https://user-images.githubusercontent.com/99865210/173816796-8dff3cb1-7126-4eab-bebf-ce0ec3d3d292.png)<br><br>
-
 ***********************************************************************************************************************************************************************
 program 7: Write  a program to display the image attributes <br>
-
 from PIL import Image<br>
 image=Image.open('p1.jpg')<br>
 print("Filename:",image.filename)<br>
@@ -92,76 +70,57 @@ print("Size:",image.size)<br>
 print("Width:",image.width)<br>
 print("Height",image.height)<br>
 image.close();<br>
-
 output:Filename: p1.jpg<br>
 Format: JPEG<br>
 Mode: RGB<br>
 Size: (275, 183)<br>
 Width: 275<br>
 Height 183<br>
-
-*******************************************************************************************************************************************************************
+******************************************************************************************************************************************************************
 program 8: Resize the original image<br>
-
 import cv2<br>
 img=cv2.imread('b1.jpg',0)<br>
 cv2.imshow('b1',img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllwindows()<br>
-
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
 img=mpimg.imread('img.jpg')<br>
 plt.imshow(img)<br>
-
-
 output :![8opt](https://user-images.githubusercontent.com/99865210/174047093-19c7a0a6-e5f7-4602-9844-ba870bc4fd68.png)<br>
 original image length width (183, 275, 3)<br>
-
 Resized image length width (160, 150, 3)<br>
-<br>    ![8optt](https://user-images.githubusercontent.com/99865210/174047351-09465a4c-0408-438d-af55-d783426eab8b.png)<br>
- 
+![8optt](https://user-images.githubusercontent.com/99865210/174047351-09465a4c-0408-438d-af55-d783426eab8b.png)<br>
  ******************************************************************************************************************************************************************
- 
- 
  program 9:Original image to gray scale  and to Binary<br>
- 
-import cv2<br>
+ import cv2<br>
 #read the image file<br>
 img=cv2.imread('F2.jpg')<br>
 cv2.imshow("RGB",img)<br>
 cv2.waitKey(0)<br>
-
 #Gray scale<br>
-
 img=cv2.imread('F2.jpg',0)<br>
 cv2.imshow("Gray",img)<br>
 cv2.waitKey(0)<br>
-
 #Binary image<br>
 ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
 cv2.imshow("Binary",bw_img)<br>
 CV2.waitKey(0)<br>
 cv2.destroyAllwindows()<br>
-
 output :![9opt](https://user-images.githubusercontent.com/99865210/174051559-50dec92f-cf41-474c-8d75-b0379d62b815.png)<br>
           ![9optt](https://user-images.githubusercontent.com/99865210/174051596-0a1e79a1-e1f7-4f85-8318-6202f2ccab6c.png)<br>
             ![9opttt](https://user-images.githubusercontent.com/99865210/174051691-9bbc480d-63a4-4891-a9ff-19109c4fed69.png)<br>
 
- 
- *****************************************************************************************************************************************************************
+*****************************************************************************************************************************************************************
  22/06/2022<br>
- 
  program 10:To dread image using url<br><br>
-        from skimage import io<br>
+ from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAz7oRpSnwGnBO2p64jeZKA6b0ULoNEII0w&usqp=CAU.jpg'<br>
 image=io.imread(url)<br>
 plt.imshow(image)<br>
 plt.show()<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/175022163-97989496-a44d-47bc-9625-7d4becaf0a29.png)<br>
-
 ******************************************************************************************************************************************************************
 program 11: To perform arthemetic operations<br>
 import cv2<br><br>
@@ -184,18 +143,11 @@ fimg4=img1/img2<br>
 plt.imshow(fimg4)<br>
 plt.show()<br>
 cv2.imwrite('output.jpg',fimg4)<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/175286745-cd75e48b-e145-46ee-95e8-45da54aaf083.png)<br>
-
 ![image](https://user-images.githubusercontent.com/99865210/175287145-050e7629-d28d-4122-8487-71351e1c024c.png)<br>
-
 ![image](https://user-images.githubusercontent.com/99865210/175287258-1721da91-bf87-4048-8144-879f34e2e9d7.png)<br>
-
 ****************************************************************************************************************************************************
-
 program 12:mask and blurr<br>
-
-
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
@@ -219,11 +171,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/99865210/175288488-b88bba43-c045-41b5-843d-3657910c7df7.png)<br>
 <br>
 ![image](https://user-images.githubusercontent.com/99865210/175288507-d8a4faaf-f3dd-41da-9c9f-30e116c25e21.png)<br>
-
-
-
 *********************************************************************************************************************************************************
-
 light_white=(0,0,200) <br>
 dark_white=(145,60,255) <br>
 mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
@@ -233,7 +181,6 @@ plt.imshow(mask_white,cmap='gray') <br>
 plt.subplot(1,2,2)<br>
 plt.imshow(result_white) <br>
 plt.show()<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/175288679-5a29e88c-c407-4527-97a4-04f2a7b96ee3.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/175288725-7d085d65-c1df-429c-ba28-0db33d724e38.png)<br>
 ********************************************************************************************************************************************
@@ -251,10 +198,8 @@ blur=cv2.GaussianBlur(final_result,(7,7),0) <br>
 plt.imshow(blur) <br>
 plt.show()<br>
 output:![image](https://user-images.githubusercontent.com/99865210/175288992-3539dab6-8f9f-456d-baeb-accada3e9443.png)<br>
-
 **********************************************************************************************************************************************************
 program 13:Develop a pgm to change the image to different color spaces<br>
-
 import cv2
 img=cv2.imread('D:\STUDENT\DataSet\images.jpg')<br><br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br><br>
@@ -271,13 +216,8 @@ cv2.waitKey(0)<br><br>
 cv2.destroyAllWindows()<br><br>
 <br><br><br>
 output:<br>![image](https://user-images.githubusercontent.com/99865210/178957793-001684d5-f0f8-40ae-8438-f497f586b5e8.png)<br><br><br>
-
-
-
 ***************************************************************************************************************************************************************
 program 14 :program to create an image using 2D array<br>
-
-
 import cv2 as c <br>
 import numpy as np<br>
 from PIL import Image<br>
@@ -288,15 +228,9 @@ img=Image.fromarray(array)<br>
 img.save('flower1.png')<br>
 img.show()<br>
 c.waitKey(0)  <br>
-
-
-
 output:<br>![image](https://user-images.githubusercontent.com/99865210/178955357-18c7c949-fee6-4c4d-9352-1abd6cb80043.png)<br>
-
-
 ******************************************************************************************************************************************************************
 program 15:Bitwise operation<br>
-
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('b1.jpg',1)<br>
@@ -318,10 +252,7 @@ plt.imshow(bitwiseNot_img1)<br>
 plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br><br>
-
-
 output:![image](https://user-images.githubusercontent.com/99865210/176403037-7ab37abb-b660-4e53-9323-2c7359302cc9.png)<br>
-
 *****************************************************************************************************************************************************************
 program 16: bilateral<br>
 import cv2<br>
@@ -339,13 +270,10 @@ bilateral=cv2.bilateralFilter(image, 9, 75, 75)<br>
 cv2.imshow('Bilateral Blurring', bilateral)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllwindows()<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/176406914-372e7044-6f21-476a-a737-4567d203098c.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/176407028-976d1b0b-c44f-4cc4-b771-79ecfa644d82.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/176407141-b5ef89ca-0274-4b13-bddb-d72e6b9b998d.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/176407279-0899768d-869d-4ec1-9a92-c31992d61f21.png)<br>
-
-
 ******************************************************************************************************************************************************************
 program 17:Image Enhancement<br>
 from PIL import Image<br><br>
@@ -368,15 +296,10 @@ enh_sha=ImageEnhance.Sharpness(image)<br>
 sharpness=3.0<br>
 image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>
-
-
-
 output:![image](https://user-images.githubusercontent.com/99865210/176414127-21ad80f3-cbc1-4e5f-893c-c013170f251e.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/176414274-46d16353-2b6f-4e27-a1a8-6e4562aa65c8.png)<br>
-
 ![image](https://user-images.githubusercontent.com/99865210/176414719-08ab5c1d-0811-4829-989f-cc0d61df4f18.png)<br>
 ![image](https://user-images.githubusercontent.com/99865210/176414817-fb9797e4-ca1d-4998-9706-3fa8b75a31e7.png)<br>
-<br>
 ![image](https://user-images.githubusercontent.com/99865210/176414936-c6ca42d8-66f0-4479-beb0-f47b8afbb80d.png)<br>
 
 ***************************************************************************************************************************************************************
@@ -407,23 +330,17 @@ plt.imshow(dilation)<br>
 plt.subplot(155)<br>
 plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
-
 output:![image](https://user-images.githubusercontent.com/99865210/176419670-4c7310aa-e37f-4131-9644-5403dd59b901.png)<br>
 
 ***********************************************************************************************************************************************************************
 program 19: image with background<br>
 from PIL import Image<br>
-
 image_file = 'test.tiff'<br>
-
 image = Image.open(image_file).convert('L')<br>
-
 histo = image.histogram()<br>
 histo_string = ''<br>
-
 for i in histo:<br>
   histo_string += str(i) + "\n"<br>
-
 print(histo_string)<br>
  output:![image](https://user-images.githubusercontent.com/99865210/178947956-db39bd02-368f-49a8-a074-2cc95f95dd7c.png)<br>
  
@@ -662,7 +579,7 @@ for y in range(imgsize[1]):<br>
         r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
         g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
         b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-        # print r, g, b<br>
+        #print r, g, b<br>
         arr[y, x] = (int(r), int(g), int(b))<br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
@@ -672,22 +589,22 @@ output:![image](https://user-images.githubusercontent.com/99865210/180202693-b0f
 program 26:  to perform matrix operation on pixels<br>
 
 import numpy as np<br>
-# Create matrix<br>
+#Create matrix<br>
 matrix = np.array([[1, 2, 3],<br>
                    [4, 5, 6],<br>
                    [7, 8, 9]])<br>
-# Return maximum element<br>
+#Return maximum element<br>
 np.max(matrix)<br>
 
 output: 9<br>
 
 **************************************************
 import numpy as np<br>
-# Create matrix<br>
+#Create matrix<br>
 matrix = np.array([[1, 2, 3],<br>
                    [4, 5, 6],<br>
                    [7, 8, 9]])<br>
-# Return maximum element<br>
+#Return maximum element<br>
 np.min(matrix)<br>
 
 output:1<br>
@@ -695,20 +612,20 @@ output:1<br>
 ***************************************************
 
 
-# example of pixel normalization<br>
+#example of pixel normalization<br>
 from numpy import asarray<br>
 from PIL import Image<br>
-# load image<br>
+#load image<br>
 image = Image.open('b3.jpg')<br>
 pixels = asarray(image)<br>
-# confirm pixel range is 0-255<br>
+#confirm pixel range is 0-255<br>
 #print('Data Type: %s' % pixels.dtype)<br>
 print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))<br>
-# convert from integers to floats<br>
+#convert from integers to floats<br>
 pixels = pixels.astype('float32')<br>
-# normalize to the range 0-1<br>
+#normalize to the range 0-1<br>
 pixels /= 255.0<br>
-# confirm the normalization<br>
+#confirm the normalization<br>
 print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))<br>
 
 output:Min: 0.000, Max: 255.000<br>
@@ -766,23 +683,21 @@ x = np.ones((3, 3))<br>
 x[1:-1, 1:-1] = 0<br>
 x = np.pad(x, pad_width=1, mode='constant', constant_values=2)<br>
 print(x)<br>
-
-
 output:[[2. 2. 2. 2. 2.]<br>
  [2. 1. 1. 1. 2.]<br>
  [2. 1. 0. 1. 2.]<br>
  [2. 1. 1. 1. 2.]<br>
  [2. 2. 2. 2. 2.]]<br>
 ***********************************************************************************
-# Python3 program for printing the rectangular pattern<br>
-# Function to print the pattern<br>
+#Python3 program for printing the rectangular pattern<br>
+#Function to print the pattern<br>
 def printPattern(n):<br>
  
     arraySize = n * 2 - 1;<br>
     result = [[0 for x in range(arraySize)]<br>
                  for y in range(arraySize)];<br>
          
-    # Fill the values<br>
+    #Fill the values<br>
     for i in range(arraySize):
         for j in range(arraySize):<br>
             if(abs(i - (arraySize // 2)) ><br>
@@ -791,13 +706,13 @@ def printPattern(n):<br>
             else:<br>
                 result[i][j] = abs(j - (arraySize // 2));<br>
              
-    # Print the array<br>
+    #Print the array<br>
     for i in range(arraySize):<br>
         for j in range(arraySize):<br>
             print(result[i][j], end = " ");<br>
         print("");<br>
  
-# Driver Code<br><br><br>
+#Driver Code<br><br><br>
 n = 4;<br>
  
 printPattern(n);<br><br>
@@ -833,31 +748,31 @@ output:![image](https://user-images.githubusercontent.com/99865210/181448313-8ce
 ******************************************************************************************************************************************************************
 program  :Edge detection using open CV<br>
 import cv2<br>
-# Read the original image<br>
+#Read the original image<br>
 img = cv2.imread('lion2.jpg') <br>
-# Display original image<br>
+#Display original image<br>
 cv2.imshow('Original', img)<br>
 cv2.waitKey(0)<br>
 
-# Convert to graycsale<br>
+#Convert to graycsale<br>
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
-# Blur the image for better edge detection<br>
+#Blur the image for better edge detection<br>
 img_blur = cv2.GaussianBlur(img_gray, (3,3), 0) <br>
 
-# Sobel Edge Detection<br>
+#Sobel Edge Detection<br>
 sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
 sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br>
 sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br>
-# Display Sobel Edge Detection Images<br>
+#Display Sobel Edge Detection Images<br>
 cv2.imshow('Sobel X', sobelx)<br>
 cv2.waitKey(0)<br>
 cv2.imshow('Sobel Y', sobely)<br>
 cv2.waitKey(0)<br>
 cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br>
 cv2.waitKey(0)<br>
-# Canny Edge Detection<br>
+#Canny Edge Detection<br>
 edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection
-# Display Canny Edge Detection Image<br>
+#Display Canny Edge Detection Image<br>
 cv2.imshow('Canny Edge Detection', edges)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
