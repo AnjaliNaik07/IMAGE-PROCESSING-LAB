@@ -788,7 +788,7 @@ output:![image](https://user-images.githubusercontent.com/99865210/186385183-691
 
 
 **********************************************************************************************************************************
-USING PILLOW FUNCTIONS
+USING PILLOW FUNCTIONS<br>
 
 
 from PIL import Image, ImageChops, ImageFilter
@@ -796,113 +796,112 @@ from matplotlib import pyplot as plt
 #Create a PIL Image objects
 x = Image.open("x.png")
 o = Image.open("o.png")
-#Find out attributes of Image Objects
+#Find out attributes of Im<br>age Objects
 print('size of the image: ', x.size, ' colour mode:', x.mode)
 print('size of the image: ', o.size, ' colour mode:', o.mode)
-#plot 2 images one besides the other
-plt.subplot(121), plt.imshow(x)
-plt.axis('off')
-plt.subplot(122), plt.imshow(o)
-plt.axis('off')
-#multiply images
-merged = ImageChops.multiply(x,o)
-#adding 2 images
-add = ImageChops.add(x,o)
+#plot 2 images one besides the other<br>
+plt.subplot(121), plt.imshow(x)<br>
+plt.axis('off')<br>
+plt.subplot(122), plt.i<br>mshow(o)
+plt.axis('off')<br>
+#multiply images<br>
+merged = ImageChops.multiply(x,o)<br>
+#adding 2 images<br>
+add = ImageChops.add(x,o)<br>
 #convert colour mode
-greyscale = merged.convert('L')
-greyscale
-OUTPUT
-![image](https://user-images.githubusercontent.com/99865210/187867136-f3fc6fc5-cfad-49cb-bb4f-f935ab674061.png)
+greyscale = mer<br>ged.convert('L')
+greyscale<br>
+OUTPUT<br>
+![image](https:/<br>/user-images.githubusercontent.com/99865210/187867136-f3fc6fc5-cfad-49cb-bb4f-f935ab674061.png)
+<br>
 
 
 
-
-image = merged
-print('image size: ',
-image.size,
-'\ncolor mode: ', image.mode,
-'\nimage width: ', image.width, '| also represented by: ',image.size[0],
-'\nimage height: ',image.height, '| also represented by: ',image.size[1],)
-OUTPUT
-![img2](https://user-images.githubusercontent.com/99865210/187881108-e6ab46ac-1661-4e0f-9365-b743051817ee.png)
+image = merged<br>
+print('image size: ', image.size,<br>
+'\ncolor mode: ', image.mode,<br>
+'\nimage width: ', image.width, '| also represented by: ',image.size[0],<br>
+'\nimage height: ',image.height, '| also represented by: ',image.size[1],)<br>
+OUTPUT<br>
+![img2](https://user-images.githubusercontent.com/99865210/187881108-e6ab46ac-1661-4e0f-9365-b743051817ee.png)<br>
 
 
 
-#mapping the pixels of the image so we can use them as coordinates
-pixel = greyscale.load()
+#mapping the pixels of the image so we can use them as coordinates<br>
+pixel = greyscale.load()<br>
 
-#a nested Loop to parse through all the pixels in the image
-for row in range (greyscale.size[0]):
-for column in range(greyscale.size[1]):
+#a nested Loop to parse through all the pixels in the image<br>
+for row in range (greyscale.size[0]):<br>
+for column in range(greyscale.size[1]):<br>
 if pixel[row, column] != (255):
-pixel[row, column] = (0)
-greyscale
-OUTPUT
-![img3](https://user-images.githubusercontent.com/99865210/187881210-cacb31ca-b6c9-4bd0-8aab-bccd36770fb9.png)
+pixel[row, column] = (0)<br>
+greyscale<br>
+OUTPUT<br>
+![img3](https://user-images.githubusercontent.com/99865210/187881210-cacb31ca-b6c9-4bd0-8aab-bccd36770fb9.png)<br>
+
+
+<br>
+invert = ImageChops.invert(greyscale)<br>
+
+#2.invert by subtraction<br>
+bg = Image.new('L', (256, 256), color=(255)) #create a new image with a solid white background<br>
+subt = ImageChops.subtract(bg, greyscale) #subtract image from background<br>
+<br>
+#3. rotate<br>
+rotate =subt.rotate(45)<br>
+rotate<br>
+OUTPUT<br>
+![img4](https://user-images.githubusercontent.com/99865210/187881377-12fdebb5-b622-4570-b3b1-26b5642c0268.png)<br>
 
 
 
-invert = ImageChops.invert(greyscale)
-
-#2.invert by subtraction
-bg = Image.new('L', (256, 256), color=(255)) #create a new image with a solid white background
-subt = ImageChops.subtract(bg, greyscale) #subtract image from background
-
-#3. rotate
-rotate =subt.rotate(45)
-rotate
-OUTPUT
-![img4](https://user-images.githubusercontent.com/99865210/187881377-12fdebb5-b622-4570-b3b1-26b5642c0268.png)
+#gaussian blur<br>
+blur = greyscale.filter(ImageFilter.GaussianBlur (radius=1))<br>
+<br>
+#edge detection<br>
+edge = blur.filter(ImageFilter.FIND_EDGES)<br>
+edge<br>
+OUTPUT<br>
+![img5](https://user-images.githubusercontent.com/99865210/187881505-fefce4a9-183f-414a-b631-7627205c4181.png)<br>
 
 
+<br><br>
+#change edge colours<br><br>
+edge = edge.convert('RGB')<br><br>
+bg_red = Image.new('RGB', (256,256), color=(255,0,0))<br><br>
 
-#gaussian blur
-blur = greyscale.filter(ImageFilter.GaussianBlur (radius=1))
-
-#edge detection
-edge = blur.filter(ImageFilter.FIND_EDGES)
-edge
-OUTPUT
-![img5](https://user-images.githubusercontent.com/99865210/187881505-fefce4a9-183f-414a-b631-7627205c4181.png)
+filled_edge = ImageChops.darker(bg_red, edge)<br><br>
+filled_edge<br><br>
+OUTPUT<br><br>
+![img6](https://user-images.githubusercontent.com/99865210/187881537-dbfe58ed-dbc8-4ec3-96c7-4166e36f01a5.png)<br><br>
 
 
 
-#change edge colours
-edge = edge.convert('RGB')
-bg_red = Image.new('RGB', (256,256), color=(255,0,0))
-
-filled_edge = ImageChops.darker(bg_red, edge)
-filled_edge
-OUTPUT
-![img6](https://user-images.githubusercontent.com/99865210/187881537-dbfe58ed-dbc8-4ec3-96c7-4166e36f01a5.png)
-
-
-
-edge.save('processed.png')
+edge.save('processed.png')<br><br>
 ***************************************************************************************************************************************************
 
-IMAGE RESTORATION
-1(restore a damaged image )
+IMAGE RESTORATION<br><br>
+1(restore a damaged image )<br><br>
 
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
-#Open the image.
-img = cv2.imread('dimage_damaged.png')
-plt.imshow(img)
-plt.show()
-#Load the mask.
-mask= cv2.imread('dimage_mask.png', 0)
-plt.imshow(mask)
-plt.show()
-#Inpaint.
-dst = cv2.inpaint (img, mask, 3, cv2.INPAINT_TELEA)
-#write the output.
-cv2.imwrite('dimage_inpainted.png', dst)
-plt.imshow(dst)
-plt.show()
-OUTPUT
-![img7](https://user-images.githubusercontent.com/99865210/187881790-add906f5-e7fd-4a8a-b680-611963be51bd.png)
+import numpy as np<br><br>
+import cv2<br><br>
+import matplotlib.pyplot as plt<br><br>
+#Open the image.<br><br>
+img = cv2.imread('dimage_damaged.png')<br><br>
+plt.imshow(img)<br><br>
+plt.show()<br><br>
+#Load the mask.<br><br>
+mask= cv2.imread('dimage_mask.png', 0)<br><br>
+plt.imshow(mask)<br><br>
+plt.show()<br>
+#Inpaint<br>.
+dst = cv2.inpaint (img, mask, 3, cv2.INPAINT_TELEA)<br>
+#write the output.<br>
+cv2.imwrite('dimage_inpainted.png', dst)<br>
+plt.imshow(dst)<br>
+plt.show()<br>
+OUTPUT<br>
+![img7](https://user-images.githubusercontent.com/99865210/187881790-add906f5-e7fd-4a8a-b680-611963be51bd.png)<br>
 
 ********************************************************************************************************************************
 2.Removing logos:
