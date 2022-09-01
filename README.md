@@ -812,10 +812,11 @@ add = ImageChops.add(x,o)<br>
 greyscale = mer<br>ged.convert('L')
 greyscale<br>
 OUTPUT<br>
-![image](https:/<br>/user-images.githubusercontent.com/99865210/187867136-f3fc6fc5-cfad-49cb-bb4f-f935ab674061.png)<br>
-<br>
+
+![image](https://user-images.githubusercontent.com/99865210/187904003-6dbdf010-7dbc-4b01-a6d4-d542e204a4f9.png)
 
 
+***********************************************************************************************************************************************
 
 image = merged<br>
 print('image size: ', image.size,<br>
@@ -1100,12 +1101,12 @@ OUTPUT:![image](https://user-images.githubusercontent.com/99865210/187899206-6d0
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
-# Loading image<br>
+#Loading image<br>
 #imge = cv2.imread('SanFrancisco.jpg',) <br>
 imge0 = cv2.imread('angry bird.png',)<br>
 #converting to gray scale<br>
 gray = cv2.cvtColor(imge0, cv2.COLOR_BGR2GRAY)<br>
-# remove noise<br><br>
+#remove noise<br><br>
 img = cv2.GaussianBlur(gray,(3,3),0)<br>
 #convolute with proper kernels<br>
 laplacian = cv2.Laplacian (img,cv2.CV_64F)<br>
