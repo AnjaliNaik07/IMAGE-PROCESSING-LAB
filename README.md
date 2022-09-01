@@ -812,7 +812,8 @@ add = ImageChops.add(x,o)
 greyscale = merged.convert('L')
 greyscale
 OUTPUT
-image
+![image](https://user-images.githubusercontent.com/99865210/187866840-11976804-b8fe-4e94-93d0-74d2b745a75e.png)
+
 
 
 image = merged
