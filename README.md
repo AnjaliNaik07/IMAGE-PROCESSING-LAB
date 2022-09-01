@@ -989,15 +989,20 @@ OUTPUT
 
 from skimage.segmentation import slic
 from skimage.color import label2rgb
-face_image=plt.imread('face.jpg')
-#obtain the segmentation with 400 regions
+import matplotlib.pyplot as plt
+import numpy as np
+face_image = plt.imread('face.jpg')
 segments = slic(face_image, n_segments=400)
-#Put segments on top of original image to compare
-segmented_image = label2rgb(segments, face_image, kind="avg")
-#Show the segmented image
-plot_comparison (face_image, segmented_image, 'Segmented image, 400 superpixels')
-OUTPUT
-![img11](https://user-images.githubusercontent.com/99865210/187883404-b6a7a3c5-6e43-492e-bb11-6af2b4176774.png)
+segmented_image=label2rgb(segments,face_image,kind='avg')
+plt.imshow(face_image)
+plt.show()
+plt.imshow((segmented_image * 1).astype(np.uint8))
+plt.show()
+
+![image](https://user-images.githubusercontent.com/99865210/187901367-67fed0fe-80ab-4452-a22c-7b1b641fcbea.png)
+
+
+
 
 ********************************************************************************************************************************************
 4 CONTOURS
