@@ -1141,7 +1141,32 @@ cv2.imshow("Prewitt", img_prewittx + img_prewitty)
 cv2.waitKey()
 cv2.destroyAllWindows()
 
-OUTPUT:
+OUTPUT:![image](https://user-images.githubusercontent.com/99865210/187900196-f9b14ba8-d7ae-4029-b76c-35d1d977aa9a.png)
+**************************************************************************
+4.ROBERT'S EDGE DETECTION-ROBERTS CROSS OPERATOR
+
+#Roberts Edge Detection- Roberts cross operator import cv2
+import numpy as np
+from scipy import ndimage
+from matplotlib import pyplot as plt
+roberts_cross_v = np.array([[1, 0 ],
+                            [0,-1]])
+
+roberts_cross_h = np.array([[0, 1],
+                            [-1, 0 ]] )
+img = cv2.imread("angry bird.png",0).astype('float64')
+img/=255.0
+vertical = ndimage.convolve( img, roberts_cross_v ) 
+horizontal=ndimage.convolve( img, roberts_cross_h)
+
+edged_img = np.sqrt( np.square(horizontal) + np.square(vertical))
+edged_img*=255
+cv2.imwrite("output.jpg", edged_img)
+cv2.imshow("OutputImage", edged_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+OUTPUT:![b1](https://user-images.githubusercontent.com/99865210/187900494-a590c5df-9f5a-40f8-bf97-62861f5bf5ec.png)
 
 
 
